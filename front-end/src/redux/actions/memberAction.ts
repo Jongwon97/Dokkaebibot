@@ -1,10 +1,12 @@
-import { setMemberData } from '../reducers/memberReducer';
 import { Member } from '../reducers/memberReducer';
-import { register } from '../../librarys/api/members';
-import { Dispatch } from 'redux';
+import { register, login } from '../../librarys/api/members';
 
 export function memberRegister(payload: Member) {
     register(payload)
     // return 값 재확인 필요
     return 1;
+}
+
+export function memeberLogin(payload: Member) {
+    login(payload)
 }
