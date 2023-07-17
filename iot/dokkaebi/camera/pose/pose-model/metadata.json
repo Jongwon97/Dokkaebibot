@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e5815e1bb8fe470419be2505f10fa638018c6c6bda1e04a15903fa828f72eef9
-size 498
+{
+    "tfjsVersion": "1.3.1",
+    "tmVersion": "0.8.6",
+    "packageVersion": "0.8.6",
+    "packageName": "@teachablemachine/pose",
+    "timeStamp": "2023-07-14T04:17:41.810Z",
+    "userMetadata": {},
+    "modelName": "my-pose-model",
+    "labels": [
+        "correct",
+        "Class 2"
+    ],
+    "modelSettings": {
+        "posenet": {
+            "architecture": "MobileNetV1",
+            "outputStride": 16,
+            "inputResolution": 257,
+            "multiplier": 0.75
+        }
+    }
+}
