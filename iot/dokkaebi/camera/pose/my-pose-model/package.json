@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6c1b2b46cc6379b737d79768c27b81b7b8c0dadb1e26b540dc58dd90bafff4de
-size 140
+{
+  "dependencies": {
+    "@teachablemachine/pose": "^0.8.6",
+    "@tensorflow/tfjs": "^4.8.0",
+    "@tensorflow/tfjs-node": "^4.8.0"
+  }
+}

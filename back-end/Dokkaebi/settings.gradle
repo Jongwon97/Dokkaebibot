@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9af3bc749c4cfa928510969642498f28d1e7e67ad92a6c2227c2eea59c830366
-size 30
+rootProject.name = 'Dokkaebi'
