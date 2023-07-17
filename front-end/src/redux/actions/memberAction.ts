@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:71cc3e90aeef58988204d3e29d0de898f1b1f3fe896d795e6b3c61824d2230b3
-size 323
+import { setMemberData } from '../reducers/memberReducer';
+import { Member } from '../reducers/memberReducer';
+import { register } from '../../librarys/api/members';
+import { Dispatch } from 'redux';
+
+export function memberRegister(payload: Member) {
+    register(payload)
+    // return 값 재확인 필요
+    return 1;
+}

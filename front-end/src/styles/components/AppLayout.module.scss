@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9cea147288025a6e40eae92073a03a1802187abcc8cc031bb15fd6899a5e8de3
-size 230
+@import "../common/_variables.scss";
+@import "../common/_mixin.scss";
+
+:global(html, body) {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+.container {
+  // @include media-query-style;
+  background-color: $DK_WHITE;
+}

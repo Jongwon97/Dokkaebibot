@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:220d2a7e937cbbc7076b3db4e58c8bbdecc4f32f5c93cffc1a859b72276cf0f4
-size 83
+insert into member(user_email,user_pw,user_name) values('fefe','adfe','이종원');

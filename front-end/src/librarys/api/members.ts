@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:26a410e58aebc6a56b418cb93aafaf1f6ca9c4ed1fe82c95e04ec37dbda96cc4
-size 424
+import client from "./client";
+
+// register
+export const register = ({ user_email, user_pw }:{user_email: string, user_pw: string}) => {
+    client.post('http://localhost:8080/dokkaebi/api/members/register', { user_email, user_pw });
+};
+
+export const login = ({ user_email, user_pw }:{user_email: string, user_pw: string}) => {
+    client.post('http://localhost:8080/dokkaebi/api/members/login', { user_email, user_pw });
+};
