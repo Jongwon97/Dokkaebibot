@@ -1,12 +1,3 @@
-package com.dokkaebi.kakao;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-
-@Getter
-@NoArgsConstructor
-public class KakaoUserInfo {
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0a44ca23a4adc760c5077bde3c6bfa8f628d609e335b3d919242a130a3326f66
+size 260
