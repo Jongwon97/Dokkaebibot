@@ -1,13 +1,3 @@
-import React from "react";
-
-const Home = React.lazy(() => import("../pages/home/Home"));
-const SignUp = React.lazy(() => import("../pages/members/SignUp"));
-const LogIn = React.lazy(() => import("../pages/members/LogIn"));
-const Study = React.lazy(() => import("../pages/study/TotalStudy"));
-
-export {
-  Home,
-  SignUp,
-  LogIn,
-  Study,
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:0c9c29f24b928673bd0eb46f470efe581ee58ec928c4c1969967f510479c642c
+size 408
