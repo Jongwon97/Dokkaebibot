@@ -1,9 +1,3 @@
-package com.dokkaebi.exception;
-
-public class UnAuthorizedException extends RuntimeException {
-	private static final long serialVersionUID = -2238030302650813813L;
-	
-	public UnAuthorizedException() {
-		super("계정 권한이 유효하지 않습니다.\n다시 로그인을 해주세요.");
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8ef7e8797a6d60eab875265a90804c5da9e855b9d2ad27cc37449fb457f1a776
+size 296
