@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9b030ecc8a0e9c089126283a60613ce744d41ed404a6f3a0bb7e9624709620f5
-size 430
+create database Dokkaebi;
+
+use Dokkaebi;
+
+CREATE TABLE member (
+    user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_email varchar(40)     NOT NULL,
+    user_pw    varchar(30) NOT NULL,
+    user_name    varchar(20),
+    token varchar(200)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci auto_increment=1;
+
+insert into member(user_email, user_pw,user_name) values("whddnjs@naver.com", 1234, "이종원");
