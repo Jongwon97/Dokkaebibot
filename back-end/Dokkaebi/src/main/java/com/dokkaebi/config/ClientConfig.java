@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7d6e985ed2cd5eeceac67f17abae69bf2a21323810cecdb87728108549a03e84
-size 323
+package com.dokkaebi.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
+
+@Configuration
+public class ClientConfig {
+  @Bean
+  public RestTemplate restTemplate() {
+    return new RestTemplate();
+  }
+}
