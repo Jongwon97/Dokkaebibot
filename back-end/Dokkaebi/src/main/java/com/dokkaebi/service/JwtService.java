@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7c73505aa7b8c714dc699a1e06fe22f348156535f0147df88e3b30badcb14db7
-size 356
+package com.dokkaebi.service;
+
+import java.util.Map;
+
+public interface JwtService {
+
+	<T> String createAccessToken(String key, T data);
+	<T> String createRefreshToken(String key, T data);
+	<T> String create(String key, T data, String subject, long expir);
+//	Map<String, Object> get(String key);
+//	String getUserId();
+	boolean checkToken(String jwt);
+	
+}
