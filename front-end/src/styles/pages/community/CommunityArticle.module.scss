@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a262cac68b55f8b6729460f21930c59f4c69da642b2232d44665ba6aa4cf6396
-size 343
+@import "../../common/_variables.scss";
+@import "../../common/_mixin.scss";
+
+.div {
+    .postInner {
+        @include media-query-style;
+        display: flex;
+        justify-content: space-between;
+        column-gap: 24px;
+
+        .profile {
+            width: 30%;
+        }
+
+        .postList {
+            width: 70%;
+        }
+    }
+
+}
