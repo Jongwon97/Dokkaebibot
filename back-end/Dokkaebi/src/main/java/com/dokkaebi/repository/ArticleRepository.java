@@ -1,16 +1,3 @@
-package com.dokkaebi.repository;
-
-import com.dokkaebi.domain.community.Article;
-import jakarta.persistence.EntityManager;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Repository;
-
-@Repository
-@RequiredArgsConstructor
-public class ArticleRepository {
-  private final EntityManager entityManager;
-
-  public void save(Article article) {
-    entityManager.persist(article);
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:632305631a3c19b5f377a01484b9f500d54b34a657d05c18aaeb6557ae567491
+size 1559
