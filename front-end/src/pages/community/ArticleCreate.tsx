@@ -1,16 +1,3 @@
-import React from 'react';
-import styles from '../../styles/pages/community/ArticleCreate.module.scss';
-import ArticleEditor from './comp/ArticleEditor';
-import CommunityHeader from './comp/CommunityHeader';
-
-function ArticleCreate() {
-
-    return (
-        <div className={styles.article}>
-            <CommunityHeader title="자유게시판" />
-            <ArticleEditor />
-        </div>
-    );
-}
-
-export default ArticleCreate;
+version https://git-lfs.github.com/spec/v1
+oid sha256:a91ca206d2e86719974ca6ebbe885ef7f7ba8748b27cbc1bc7be0a2236b9be72
+size 431
