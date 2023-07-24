@@ -1,0 +1,23 @@
+@import "../../common/_variables.scss";
+@import "../../common/_mixin.scss";
+
+.div {
+    display: flex;
+    flex-direction: column;
+    .postInner {
+        @include media-query-style;
+        display: flex;
+        justify-content: space-between;
+        column-gap: 24px;
+        z-index: 1;
+
+        .profile {
+            width: 30%;
+        }
+
+        .postList {
+            width: 70%;
+        }
+    }
+
+}
