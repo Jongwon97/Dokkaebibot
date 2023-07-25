@@ -1,16 +1,3 @@
-package com.dokkaebi.repository;
-
-import java.util.List;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.stereotype.Repository;
-
-import com.dokkaebi.domain.studyroom.StudyRoom;
-
-@Repository
-public interface StudyRoomRepository extends JpaRepository<StudyRoom, Long> {
-
-	@Query("select s from StudyRoom s order by s.createdDate desc limit 10")
-	List<StudyRoom> findByStudyRoomsRecent10();
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:23a26e8e802b3a94945fc82a1f7ed0b2c4cdfa58b1b4a67d305eb9f2a7123433
+size 527
