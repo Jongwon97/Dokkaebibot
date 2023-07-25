@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:98ae0b3ce4c5f4ccc897e17820445c71f7c2200306c62f500c803771318568ff
-size 500
+@import "../../common/_variables.scss";
+@import "../../common/_mixin.scss";
+
+.div {
+    display: flex;
+    flex-direction: column;
+    .myStudyroom {
+        @include media-query-style;
+        display: flex;
+        justify-content: space-between;
+        column-gap: 24px;
+        z-index: 1;
+
+        .profile {
+            width: 30%;
+        }
+
+        .myList {
+            width: 70%;
+        }
+    }
+    .totalStudyroom {
+        @include media-query-style;
+        margin-top: 100px;
+    }
+}
