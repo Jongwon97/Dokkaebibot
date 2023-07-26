@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3296deee350875161255d3b405bb97fd555804cfbe7afa6bd4a04d39b02e95da
-size 293
+package com.dokkaebi.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.dokkaebi.domain.studyroom.HashTag;
+
+public interface HashTagRepository extends JpaRepository<HashTag, Long> {
+	
+	List<HashTag> findByStudyRoomId(Long roomId);
+}
