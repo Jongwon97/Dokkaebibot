@@ -1,13 +1,3 @@
-import { client } from "./client";
-
-const membersURL = 'members/'
-
-export const postMember = ({ email, nickname, password }:
-    {email: string, nickname: string, password: string}) => {
-    return client.post(membersURL + 'register', { email, nickname, password });
-};
-
-export const memberLogin = ({ email, password }:
-    {email: string, password: string}) => {
-    return client.post(membersURL + 'login', { email, password });
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:29a4ff60634d3411c48fb91c9556b329887bb60dea1826d18b7ad582ad5a7c48
+size 548
