@@ -1,15 +1,3 @@
-import axios from "axios"
-
-
-let token = localStorage.getItem("accessToken")
-
-token = token === null ? "" : token
-const baseURL = 'http://localhost:8080/dokkaebi/api/studyrooms'
-// const headers = {
-//     "Content-type": 'application/json; charset=UTF-8',
-//     "accessToken": token,
-// }
-
-export const getStudyRoomsLatest = () => {
-    return axios.get(baseURL + '/community')
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:17e96bdedd79bfa2e550e4a0e29afc593e9fa7f5b3e5486d40357192471274f7
+size 872
