@@ -1,21 +1,3 @@
-package com.dokkaebi.domain.community;
-
-import java.util.Date;
-import lombok.Data;
-
-@Data
-public class ArticleSimpleDTO {
-  private Long id;
-  private String title;
-  private Date createdAt;
-  private int numLike;
-  private int numScrap;
-
-  public ArticleSimpleDTO(Article article) {
-    id = article.getId();
-    title = article.getTitle();
-    createdAt = article.getCreatedAt();
-    numLike = article.getLikeList().size();
-    numScrap = article.getScrapList().size();
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d47faeedd7d0686832aaeb72a9c8f14813612eb66530eb32e9be930ad0c6b778
+size 540
