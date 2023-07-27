@@ -1,17 +1,3 @@
-body {
-  margin: 0;
-  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-html {
-  height: 100%;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9d97283955389720cc75272bfde4179195a639041e7b383d2816d8dc3138e33f
+size 513
