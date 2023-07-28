@@ -1,20 +1,3 @@
-package com.dokkaebi.domain.community;
-
-import lombok.Data;
-
-@Data
-public class FriendDTO {
-  private Long id;
-  private Long member1Id;
-  private String member1Nickname;
-  private Long member2Id;
-  private String member2Nickname;
-
-  public FriendDTO(Friend friend) {
-    id = friend.getId();
-    member1Id = friend.getMember1().getId();
-    member1Nickname = friend.getMember1().getNickname();
-    member2Id = friend.getMember2().getId();
-    member2Nickname = friend.getMember2().getNickname();
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d90488413baf100e38d6eb2eb9d2422a4efd63ac8f14dc16a5d3b3d7ad1e1eb7
+size 503
