@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:33dc0d62c33e1a16f554728d9e8093df783d8b6164abe56e0b66ec1870e6ef3a
-size 444
+package com.dokkaebi.service.studyroom;
+
+import java.util.List;
+
+import com.dokkaebi.domain.Member;
+import com.dokkaebi.domain.studyroom.StudyRoom;
+import com.dokkaebi.domain.studyroom.StudyRoomDto;
+
+public interface StudyRoomService {
+	public boolean createStudyRoom(StudyRoom studyRoom, Member member); // 스터디룸 생성
+	public List<StudyRoomDto> getRecent10StudyRooms(); 					// 가장 최근에 생성된 스터디룸 10개 반환 
+}
