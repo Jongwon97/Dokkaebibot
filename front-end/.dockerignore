@@ -1,0 +1,6 @@
+.gitignore
+.prettierrc
+README.md
+node_modules
+build
+tsconfig.json
