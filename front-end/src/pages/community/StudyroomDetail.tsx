@@ -1,15 +1,3 @@
-import React from 'react';
-import CommunityHeader from './comp/CommunityHeader';
-import { useSelector } from 'react-redux';
-import { RootState } from '../../redux/store';
-
-function StudyroomDetail() {
-  const studyroom = useSelector((state:RootState) => state.persistedReducer.studyroomReducer);
-  return (
-    <div className="Home">
-      <CommunityHeader title={studyroom.title} tab='studyroom' />
-    </div>
-  );
-}
-
-export default StudyroomDetail;
+version https://git-lfs.github.com/spec/v1
+oid sha256:b54de8ffac722648f7e35e0317a5399f231a920b616a48be761caf2778cfd52f
+size 1212
