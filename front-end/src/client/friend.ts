@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:466ccb394df57a3de69fe27bc3c11629e8413bd4e406a79f62ca8f01b26a7a3a
-size 427
+import { client, clientWithToken } from "./client"
+
+const friendUrl = 'community/friend/'
+
+export const postFriend = (friendId:Number) => {
+	console.log("done")
+	return clientWithToken.post(friendUrl + friendId + "/check")
+}
+
+export const getFriend = () => {
+	return clientWithToken.get(friendUrl + "check")
+}
+
+export const deleteFriend = (friendId:Number) => {
+	return clientWithToken.delete(friendUrl + friendId + "/check")
+}
