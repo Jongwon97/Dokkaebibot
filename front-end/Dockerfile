@@ -7,8 +7,7 @@ RUN npm run build
 
 FROM nginx:stable-alpine
 COPY --from=build /app/build /build
-RUN cd build
-RUN ls -la
+RUN ls -laR | grep build
 RUN rm /etc/nginx/conf.d/default.conf
 COPY default.conf /etc/nginx/conf.d
 CMD [ "nginx", "-g", "daemon off;" ]
