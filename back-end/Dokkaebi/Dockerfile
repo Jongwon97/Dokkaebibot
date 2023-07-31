@@ -1,4 +1,4 @@
-FROM openjdk:17-oracle
+FROM amazoncorretto:17-alpine
 WORKDIR /back
 COPY . .
 RUN chmod +x gradlew
