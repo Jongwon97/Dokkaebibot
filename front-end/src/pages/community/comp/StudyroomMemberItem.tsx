@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e298a59c88140157f3796183e83d98def8a3d702ecd71cd9ce517d566087e060
-size 323
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../../redux/store';
+
+function StudyroomMemberItem() {
+  const user = useSelector((state:RootState) => state.persistedReducer.memberReducer);
+  return (
+    <div>
+      
+    </div>
+  );
+}
+
+export default StudyroomMemberItem;
