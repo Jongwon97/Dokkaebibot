@@ -1,0 +1,4 @@
+USE dokkaebi;
+
+INSERT INTO FRIEND(member1_id, member2_id) 
+VALUES(1, 2);
