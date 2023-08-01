@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:159553f3de8d66c49f25340a2b62ec1e45a4eda7123387643e6d05edf38a49f9
-size 335
+package com.dokkaebi.repository.StudyRoom;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.dokkaebi.domain.studyroom.StudyRoomMember;
+
+public interface StudyRoomMemberRepository extends JpaRepository<StudyRoomMember, Long>{
+
+	List<StudyRoomMember> findAllByMemberId(Long memberId);
+}

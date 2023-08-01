@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7fd891cdbfa16a18e379e94e6646729efaf0356155e29fd27dfb6ebb568c8b42
-size 177
+{
+  "short_name": "React App",
+  "name": "Create React App Sample",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0D0D0D",
+  "background_color": "#FDFDFD"
+}
