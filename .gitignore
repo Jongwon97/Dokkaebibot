@@ -2,3 +2,4 @@
 .weights
 .cfg
 venv
+*__pycache__
