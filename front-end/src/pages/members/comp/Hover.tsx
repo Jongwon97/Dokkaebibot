@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2bc0ef7abec298dc6db7aa57b087a09b224fce05bcc774d2e8f5d10a4d655dac
-size 234
+import React, { useState } from 'react';
+// import styles from '../styles/components/Modal.module.scss';
+// import classNames from 'classnames/bind';
+
+const Hover = () => {
+	return (
+		<div>
+			hi
+		</div>
+	)
+}
+
+export default Hover;

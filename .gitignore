@@ -1,2 +1,5 @@
 .idea
+.weights
+.cfg
 venv
+*__pycache__
