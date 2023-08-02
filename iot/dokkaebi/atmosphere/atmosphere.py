@@ -1,19 +1,3 @@
-from dokkaebi.atmosphere.dht11 import DHT11
-
-class Atmosphere:
-    """
-    Atmosphere module
-    """
-    def __init__(self):
-        """
-        Atmosphere Constructor
-        """
-        self.__dht11 = DHT11()
-
-    def get_atmosphere_data(self):
-        self.__dht11.read_temp_humid()
-    
-
-def main():
-    at = Atmosphere()
-    at.get_atmosphere_data()
+version https://git-lfs.github.com/spec/v1
+oid sha256:8eda778e613a7de9932186eb63d6bd573d6f090b7451300c8da9719ebdec31eb
+size 374
