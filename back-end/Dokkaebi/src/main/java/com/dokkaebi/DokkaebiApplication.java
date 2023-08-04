@@ -1,13 +1,3 @@
-package com.dokkaebi;
-
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-@SpringBootApplication
-public class DokkaebiApplication {
-	public static void main(String[] args) {
-		SpringApplication.run(DokkaebiApplication.class, args);
-	}
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9d82167b60d306e621e9612d76758a307ce5fc05df036c2db1f1555aee04cd59
+size 367

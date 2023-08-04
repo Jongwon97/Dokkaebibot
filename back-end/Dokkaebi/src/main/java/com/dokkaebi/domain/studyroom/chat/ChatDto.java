@@ -1,13 +1,3 @@
-package com.dokkaebi.domain.studyroom.chat;
-
-import lombok.Data;
-
-@Data
-public class ChatDto {
-
-	private Long roomId;
-	private Long memberId;
-	private String sender;	// 보낸 유저 이름
-	private String message;	// 메세지
-	private String time;	// 채팅 발송 시간
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:af78d55f5eb4c68ece0778be33fedacdc3e1c25863d4a0fbb71a103d3f2710a0
+size 296
