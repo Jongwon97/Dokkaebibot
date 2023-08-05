@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9a24993eeb4d506040d1d2da7898d8d841481cc4041efccf6b9c5a5da6e246e7
-size 229
+@import '../../../common/mixin';
+@import '../../../common/variables';
+
+p {
+    margin: 0;
+}
+
+.basicSetting {
+    width: 100%;
+    border: 1px solid $DK_MAIN;
+    border-radius: 12px;
+    padding: 18px 28px;
+    color: $DK_GRAY;
+}

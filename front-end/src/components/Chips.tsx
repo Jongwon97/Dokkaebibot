@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:18f9ca0b0cabf4d4225936eddd644a956bced78b7ca04b36c08b6b20cb4a5f65
-size 657
+import React from 'react';
+import styles from '../styles/components/Chips.module.scss';
+
+const Chips = ({ text }: { text: string }) => {
+
+  return (
+    <>
+      <div className={styles.outerDiv}>
+        <p className={styles.innerText}>{text}</p>
+      </div>
+    </>
+  );
+};
+
+export default Chips;
