@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:30026dfc2bb6bd035c1c0053518db56f7a0a02530d72a1e8db24a2e4f00d6b04
-size 213
+import dokkaebi
+from time import sleep
+
+at = dokkaebi.Atmosphere()
+at.init()
+
+while True:
+    at.get_atmosphere_data()
+    at.get_dust_data()
+    print(at.temp)
+    print(at.humid)
+    print(at.dust)
+    sleep(1)
