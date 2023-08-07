@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:06f1432f993aeb17217deff30396f349adca5c179797cc2907b0db833cff1158
-size 350
+package com.dokkaebi.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.dokkaebi.domain.MemberInterest;
+
+public interface MemberInterestRepository extends JpaRepository<MemberInterest, Long> {
+
+	List<MemberInterest> findByMemberId(Long memberId);
+	
+	void deleteByMemberId(Long memberId);
+}
