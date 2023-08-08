@@ -1,15 +1,3 @@
-import React from 'react';
-import styles from '../../../styles/pages/members/comp/StudySetting.module.scss';
-import StudyCalendar from '../../study/comp/StudyCalendar';
-
-function StudySetting() {
-  return (
-    <div className="StudySetting">
-      <div className={styles.basicSetting}>
-        <StudyCalendar />
-      </div>
-    </div>
-  );
-}
-
-export default StudySetting;
+version https://git-lfs.github.com/spec/v1
+oid sha256:98d9991c80a93a83898feeb539a9f42c9043f98d01ec4cb874feec42ec554d52
+size 522
