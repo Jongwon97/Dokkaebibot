@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0f910d03bc8587913ad610afec456c5e0e23fa56062d8397d903bcc9b553be59
-size 484
+@import '../../../common/mixin';
+@import '../../../common/variables';
+
+.StudyExitSetting {
+    .midTitle {
+        font-size: 16px;
+        color: $DK_GRAY;
+        margin: 0 0 8px 0;
+    }
+
+    .info {
+        font-size: 12px;
+        font-weight: 400;
+        color: $DK_GRAY;
+    }
+    .button {
+        padding: 12px 0;
+        font-size: 16px;
+        font-weight: 600;
+        background: $DK_WHITE;
+        border: none;
+        color: $DK_RED;
+        cursor: pointer;
+    }
+}
