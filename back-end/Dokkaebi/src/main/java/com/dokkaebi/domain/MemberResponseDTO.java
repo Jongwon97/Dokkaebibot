@@ -1,18 +1,3 @@
-package com.dokkaebi.domain;
-
-import lombok.Data;
-
-@Data
-public class MemberResponseDTO {
-  private Long id;
-  private String email;
-  private String nickname;
-  private Integer iconNumber;
-  
-  public MemberResponseDTO(Member member) {
-    id = member.getId();
-    email = member.getEmail();
-    nickname = member.getNickname();
-    iconNumber = member.getIconNumber();
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6ecbeb20c27ced2fd2a389dd72e03e57a1f5521333e5fb734405ff46363f5658
+size 461
