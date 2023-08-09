@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:70b1ad92c2700acd67d50c0f0757b1522dc67b4d3c76d80b1b0e439ccb68ce6a
-size 365
+package com.dokkaebi.domain;
+
+import java.util.HashMap;
+import java.util.Map;
+import lombok.Data;
+
+@Data
+public class StudyStatusDTO {
+
+  private Long memberId;
+  private Map<String, Map<String, Float>> atmosphere;
+  private String study;
+
+  public void setAtmosphere(Map<String, Float> atmosphereStatus) {
+    atmosphere.put("atmosphere", atmosphereStatus);
+  }
+}
