@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8a7343f2c489767dfe6f6423b3814d04ca3ea4dd80f7c8ff29766b7b8cdb0a26
-size 329
+package com.dokkaebi.domain.studyroom;
+
+import lombok.Data;
+
+@Data
+public class SocketStudyRoomMemberDto {
+
+	private String type;	// 	전송 목적 구별
+	private Long memberId;		// 	멤버 아이디
+	private Long roomId;
+	private int isActive;	// 	현재 스터디룸 활동 여부
+	private String state;		//	Iot 데이터
+	
+}
