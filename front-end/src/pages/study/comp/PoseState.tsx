@@ -1,12 +1,3 @@
-import React from 'react';
-import styles from '../../../styles/pages/study/comp/PoseState.module.scss';
-
-function PoseState() {
-  return (
-    <div className={styles.poseState}>
-        <p className={styles.title}>오늘의 공부 분석</p>
-    </div>
-  );
-}
-
-export default PoseState;
+version https://git-lfs.github.com/spec/v1
+oid sha256:14959390fe00c8c23dd80531167ef318a56be564cc0f252fc0c7f58c1ce87f58
+size 286
