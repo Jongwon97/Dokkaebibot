@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:61f485f10d8845e81ffee544ab504812c87c42fa9d4c3a4e99ed846222acf27b
-size 229
+@import '../../../common/mixin';
+@import '../../../common/variables';
+
+.poseState {
+  width: 70%;
+  height: 600px;
+  border: 1px solid $DK_LGRAY;
+  border-radius: 12px;
+  padding: 18px 24px;
+  .title {
+    color: $DK_GRAY;
+  }
+}
