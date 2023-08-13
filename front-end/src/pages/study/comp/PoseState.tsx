@@ -1,14 +1,3 @@
-import React from 'react';
-import styles from '../../../styles/pages/study/comp/PoseState.module.scss';
-// import DataGraph from './DataGraph';
-
-function PoseState(dates:Date[]) {
-  return (
-    <div className={styles.poseState}>
-        <p className={styles.title}>오늘의 공부 분석</p>
-        {/* <DataGraph dates={dates}/> */}
-    </div>
-  );
-}
-
-export default PoseState;
+version https://git-lfs.github.com/spec/v1
+oid sha256:b3e3a9886b9e7c2c367f4f37baf5758450e6b87341e4b261eb5da59643dc8d30
+size 548
