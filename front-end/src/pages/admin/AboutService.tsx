@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b1e59f7d4ff606d7f6931728881de288ad222b4c373cb398266285489e1dea0d
-size 204
+import React from 'react';
+import AboutDokkaebi from '../home/comp/AboutDokkaebi';
+
+function AboutService() {
+  return (
+    <div>
+        <AboutDokkaebi />
+    </div>
+  );
+}
+
+export default AboutService;
