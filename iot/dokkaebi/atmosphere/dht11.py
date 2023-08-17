@@ -1,16 +1,3 @@
-import Adafruit_DHT
-
-class DHT11:
-    SENSOR = Adafruit_DHT.DHT11
-    PIN = 2
-
-    def __init__(self):
-        """
-        DHT11 module
-        """
-    def read_temp_humid(self):
-        humid, temp = Adafruit_DHT.read_retry(self.SENSOR, self.PIN)
-        if humid is not None and temp is not None:
-            print("Temp = {0:0.1f}*C\nHumidity={1:0.1f}%\b".format(temp, humid))
-        else:
-            print("Failed to get reading")
+version https://git-lfs.github.com/spec/v1
+oid sha256:77ae6de016cb35103ebe82206686e53e0646d00b16f90dc2e1000d028eed3af1
+size 732

@@ -1,15 +1,3 @@
-import { client, clientWithToken } from "./client"
-
-const friendUrl = 'community/friend/'
-
-export const postFriend = (friendId:Number) => {
-	return clientWithToken().post(friendUrl + friendId + "/check")
-}
-
-export const getFriend = () => {
-	return clientWithToken().get(friendUrl + "check")
-}
-
-export const deleteFriend = (friendId:Number) => {
-	return clientWithToken().delete(friendUrl + friendId + "/check")
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8e053f561f373a3dc6629dd4ecbf6a1ee8dc380479e0854ea6824e1765e071a6
+size 412

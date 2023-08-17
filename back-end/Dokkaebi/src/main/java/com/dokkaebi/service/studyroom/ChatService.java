@@ -1,12 +1,3 @@
-package com.dokkaebi.service.studyroom;
-
-import java.util.List;
-
-import com.dokkaebi.domain.studyroom.chat.ChatDto;
-
-public interface ChatService {
-
-	public boolean registMessage(ChatDto chatDto); // DB에 메세지 반영
-	
-	public List<ChatDto> getStudyRoomChats(Long roomId);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2752fb7786b30c72a37c4c7ca44a5219417cb7df3903634be059fe388164ae80
+size 281
