@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:270416a50587c000726228cddf982d30dce150127daff054e6b547959b9ce8d1
-size 257
+.idea
+.weights
+.cfg
+venv
+*__pycache__*
+iot/dokkaebi/data/voice/input.wav
+iot/dokkaebi/data/camera/data.json
+iot/dokkaebi/data/atmosphere/data.json
+iot/dokkaebi/data/study.json
+iot/dokkaebi/data/camera/object/*.cfg
+iot/dokkaebi/data/camera/object/*.weights
+

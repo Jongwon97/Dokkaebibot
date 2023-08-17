@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3111d641e987ba4a3da1080fbc33d3d72f99f745035f01038f5176d5c66ae5e5
-size 420
+package com.dokkaebi.domain.admin;
+
+import com.dokkaebi.service.TimeService;
+import lombok.Data;
+
+@Data
+public class NoticeDTO {
+  private Long id;
+  private String title;
+  private String content;
+  private String createdAt;
+
+  public NoticeDTO(Notice notice) {
+    id = notice.getId();
+    title = notice.getTitle();
+    content = notice.getContent();
+    createdAt = TimeService.toDate(notice.getCreatedAt());
+  }
+
+}
