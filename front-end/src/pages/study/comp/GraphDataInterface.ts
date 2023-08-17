@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d9e54f6c974915ecaaca56d104ad0eeefef577abe9db3cc336e06163432a01db
-size 374
+export default interface graphDataType {
+  timeIndex: String[];
+  temperatureData: number[];
+  dustData: number[];
+  humidityData: number[];
+  poseTimeIndex: number[];
+  poseData: String[];
+  poseTimeSum: {
+    sleep: number;
+    away: number;
+    bad: number;
+    phone: number;
+    good: number;
+  };
+  start: number;
+  end: number;
+}
+
+export const initialGraphData = {
+
+}

@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2ba628cdb5606f4d545b318275343d478ed909416d6a39dfd664e0f4eddc862a
-size 497
+{"start": 1691481715.2631822, "end": 1691481740.2451384, "atmosphere": [{"temp": 24.0, "humid": 58.0, "dust": 38.0, "timestamp": 1691481718}, {"temp": 24.0, "humid": 59.0, "dust": 12.89, "timestamp": 1691481722}, {"temp": 24.0, "humid": 58.0, "dust": 12.06, "timestamp": 1691481726}, {"temp": 24.0, "humid": 58.0, "dust": 22.85, "timestamp": 1691481733}, {"temp": 24.0, "humid": 63.0, "dust": -0.39, "timestamp": 1691481737}, {"temp": 24.0, "humid": 61.0, "dust": 12.06, "timestamp": 1691481739}]}
