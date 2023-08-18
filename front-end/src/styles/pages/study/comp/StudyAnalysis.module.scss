@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d47c12cd8f511047cb1b9a17323538b16373a0d8ea6485cb4dfed31c11bf5147
-size 391
+@import '../../../common/mixin';
+@import '../../../common/variables';
+
+.poseState {
+  width: 100%;
+  border: 1px solid $DK_LGRAY;
+  border-radius: 12px;
+  padding: 18px 24px;
+  overflow: hidden;
+  margin: 12px 0;
+  .title {
+    color: $DK_GRAY;
+  }
+  .cards {
+    margin-top: 12px;
+    display: flex;
+    margin-left: auto;
+    .card {
+      width: 20%;
+      margin-right: 8px;
+    }
+  }
+}
