@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9bbddcf0d6c3c4d473b457a574e3db53a5a16d465387586ff9ab65777e98f2f1
-size 658
+package com.dokkaebi.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+public class CorsConfig implements WebMvcConfigurer {
+
+	@Override
+	public void addCorsMappings(CorsRegistry registry) {
+		registry.addMapping("/**")
+		// .allowedOrigins("https://i9a302.p.ssafy.io")
+		// .allowedOrigins("http://127.0.0.1:3000","http://localhost:3000", "https://i9a302.p.ssafy.io")
+		.allowedOrigins("*")
+		.allowedMethods("*")
+		.allowedHeaders("*");
+		// .allowCredentials(true);
+	}
+	
+}

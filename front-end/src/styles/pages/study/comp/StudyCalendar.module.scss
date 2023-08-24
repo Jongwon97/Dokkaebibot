@@ -1,3 +1,73 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:54ab26e1647825825fc046689dc168ae2cf9b42f73f6fd28c76f132feab1b311
-size 1470
+@import '../../../common/mixin';
+@import '../../../common/variables';
+
+.calDiv {
+  .title {
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .innerDiv {
+      margin-top: 16px;
+      max-width: 176px;
+      display: flex;
+      column-gap: 6px;
+      row-gap: 4px;
+      flex-wrap: wrap;
+      .rect {
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+      }
+      .levelDefault {
+        background-color: $DK_WHITE;
+        border: 1px solid $DK_LGRAY;
+      }
+      .level0 {
+        background-color: $DK_LGRAY;
+      }
+      .level1 {
+        background-color: $DK_LightG;
+      }
+      .level2 {
+        background-color: #85e1b7;
+      }
+      .level3 {
+        background-color: $DK_MAIN;
+      }
+      .level4 {
+        background-color: $DK_DarkG;
+      }
+    }
+    .info {
+      .infoDiv {
+        display: flex;
+        margin: 4px 0;
+        font-size: 13px;
+        .rect {
+          width: 16px;
+          height: 16px;
+          border-radius: 4px;
+          margin-right: 4px;
+          vertical-align: middle;
+        }
+        .level0 {
+          background-color: $DK_LGRAY;
+        }
+        .level1 {
+          background-color: $DK_LightG;
+        }
+        .level2 {
+          background-color: #85e1b7;
+        }
+        .level3 {
+          background-color: $DK_MAIN;
+        }
+        .level4 {
+          background-color: $DK_DarkG;
+        }
+      }
+    }
+  }
+}

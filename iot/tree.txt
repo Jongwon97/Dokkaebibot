@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:65b9dfa0e4181b1347ec302092493d194c64bb3d092ef24ca1c9f34e2c2d2a1a
-size 1094
+iot                         # 최상위 폴더
+├─ .gitignore               # git commit 시 제외할 파일/폴더
+├─ README.md                # README 파일
+├─ LICENSE                  # 라이선스 정보
+├─ requirements.txt         # dependency 정보
+├─ setup.py                 # 빌드, 배포를 위한 설정
+├─ test_requirements.txt    # 테스트 dependency 정보
+├─ data                     # 데이터 폴더
+│   ├─ camera
+│   ├─ voice
+│   └─ atmosphere
+├─ resourcses               # 프로그램 실행 시 필요한 정보들 (음향파일 등)
+│   └─ config.yml           # main.py 실행 시 필요한 정보를 정의한 파일
+├─ dokkaebi                 # 패키지 폴더
+│   ├─ __init__.py
+│   ├─ camera
+│   │   ├─ __init__.py
+│   │   └─ camera.py
+│   ├─ voice
+│   │   ├─ __init__.py
+│   │   ├─ voice.py
+│   │   ├─ wakeword.py
+│   │   └─ STT.py
+│   └─ atmosphere
+│       ├─ __init__.py
+│       └─ atmosphere.py
+└─ main.py

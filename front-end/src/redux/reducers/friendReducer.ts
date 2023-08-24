@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d441653f7c9f0e2840474e4b147be9c2970c6c2a6c6d651b352509be70118668
-size 692
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+
+export interface Friend {
+  id: number;
+  friendId: number;
+  friendEmail: string;
+  friendNickname: string;
+  friendIconNumber: number;
+  isNewMessage: boolean;
+}
+
+const initialState: Friend = {
+  id: 0,
+  friendId: 0,
+  friendEmail: '',
+  friendNickname: '',
+  friendIconNumber: 0,
+  isNewMessage: false,
+};
+
+const friendSlice = createSlice({
+  name: 'friend',
+  initialState: initialState,
+  reducers: {
+    setFriendData: (state, action: PayloadAction<Friend>) => {
+      return {
+        ...action.payload,
+      };
+    },
+  },
+});
+
+export const { setFriendData } = friendSlice.actions;
+export default friendSlice.reducer;

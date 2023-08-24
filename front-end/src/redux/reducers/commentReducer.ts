@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ef7d82b426f1fc606b9698cde597aee8226772d1209f623d1f2ce5a2f12cac7f
-size 735
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { act } from 'react-dom/test-utils'
+
+export interface Comment {
+    id: number
+    content: string
+    createdAt: string
+    writerId: number
+    writerNickname: string
+}
+
+const initialState: Comment[] = []
+
+const commentSlice = createSlice({
+    name: 'comment',
+    initialState: initialState,
+    reducers: {
+        setCommentList: (state, action: PayloadAction<Comment[]>) => {
+            return [...action.payload]
+        },
+        addComment: (state, action:PayloadAction<Comment>) => {
+            return [...state, action.payload]
+        }
+    }
+})
+
+export const { setCommentList, addComment } = commentSlice.actions
+export default commentSlice.reducer;

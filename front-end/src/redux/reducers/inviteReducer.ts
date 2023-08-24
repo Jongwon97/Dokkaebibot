@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7b5b68cee2e504b4a422746e2ecbf160c26a3e3201f41d7476a77096e8dbd2e3
-size 703
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+
+export interface Invite {
+	id?: number,
+	receiverId: number,
+	senderId: number,
+	senderNickname?: string,
+	studyRoomId?: number,
+	studyRoomTitle?: string,
+	notRead?: boolean
+}
+
+const initialState: Invite = {
+	id: 0,
+	receiverId: 0,
+	senderId: 0,
+	senderNickname: "",
+	studyRoomId: 0,
+	studyRoomTitle: "",
+	notRead: true
+}
+
+const inviteSlice = createSlice({
+    name: 'invite',
+    initialState: initialState,
+    reducers: {
+				setInviteData: (state, action: PayloadAction<Invite>) => {
+						return {
+							...action.payload
+						}
+				}
+    }
+})
+
+export const { setInviteData } = inviteSlice.actions
+export default inviteSlice.reducer;

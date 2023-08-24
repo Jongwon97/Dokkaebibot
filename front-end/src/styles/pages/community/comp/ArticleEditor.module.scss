@@ -1,3 +1,42 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:48e2d044321dac829d03e0b6bc17cfd6bbdf99821a51da960c97f6ffe6c5eef7
-size 822
+@import '../../../common/mixin';
+@import '../../../common/variables';
+
+.editor {
+  @include media-query-style;
+  z-index: 1;
+  .form {
+    display: flex;
+    flex-direction: column;
+    .title {
+      margin: -24px 0px 12px 0px;
+      &:hover {
+        border-color: $DK_LightG;
+      }
+      &:focus {
+        outline: none;
+        box-shadow: none;
+        border-color: $DK_LightG;
+      }
+    }
+
+    .button {
+      margin-left: auto;
+      border-radius: 8px;
+      width: 160px;
+      margin-top: 12px;
+      margin-bottom: 24px;
+      background-color: $DK_MAIN;
+      border-color: $DK_MAIN;
+      &:hover {
+        background-color: $DK_MAIN;
+        border-color: $DK_MAIN;
+        opacity: 75%;
+      }
+      &:focus {
+        outline: none;
+        box-shadow: none;
+        opacity: 90%;
+      }
+    }
+  }
+}

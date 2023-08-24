@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b706eed6981775dd5546f7a18718cb0c2246eca202357125c32b26a6f40378a5
-size 742
+import React from 'react';
+import styles from '../../styles/pages/community/ArticleTotal.module.scss';
+import CommunityHeader from './comp/CommunityHeader';
+import ArticleList from './comp/ArticleList';
+import MyArticle from './comp/MyArticle';
+
+function CommunityArticle() {
+
+    return (
+        <div className={styles.div}>
+            <CommunityHeader title='자유게시판 🎠' tab='community' />
+            <div className={styles.postInner}>
+                <div className={styles.profile}>
+                    <MyArticle />
+                </div>
+                <div className={styles.postList}>
+                    <ArticleList />
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default CommunityArticle;

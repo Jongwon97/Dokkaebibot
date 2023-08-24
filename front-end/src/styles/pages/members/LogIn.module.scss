@@ -1,3 +1,109 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3c52a4bd44e8ac46b4e358da3311b68307ab223bf5ce9333529622cdc552454a
-size 2603
+@import "../../common/_variables.scss";
+@import "../../common/_mixin.scss";
+
+.login {
+    color: $DK_WHITE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    height: 624px;
+
+    .box {
+        width: 506px;
+        height: 480px;
+        background-color: $DK_WHITE;
+        border-radius: 12px;
+        color: $DK_BLACK;
+        text-align: center;
+        box-shadow: 2px 4px 12px $DK_LGRAY;
+
+        .title {
+            margin-top: 35px;
+            margin-bottom: 36px;
+        }
+
+        .left {
+            width: 424px;
+            margin: auto;
+            text-align: left;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .hr {
+            width: 424px;
+            height: 0.4px;
+            opacity: 50%;
+            background-color: $DK_GRAY;
+            margin: auto;
+            margin-bottom: 16px;
+        }
+
+        .inputBox {
+            width: 424px;
+            margin-bottom: 8px;
+            border-radius: 12px;
+            &:hover {
+                outline: none;
+                border-color: $DK_MAIN;
+            }
+            &:focus {
+                outline: none;
+                box-shadow: none;
+                border-color: $DK_MAIN;
+            }
+        }
+        .snsLogin {
+            width: 424px;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            margin-bottom: 20px;
+
+            .googleButton {
+                border: none;
+                background-color: transparent;
+                padding: 0;
+                width: 216px;
+                &:hover {
+                    opacity: 75%;
+                }
+            }
+            .kakaoButton {
+                border: none;
+                background-color: transparent;
+                padding: 0;
+                width: 200px;
+                &:hover {
+                    opacity: 75%;
+                }
+            }
+        }
+        .inputButton {
+            border-radius: 12px;
+            width: 424px;
+            margin-bottom: 12px;
+            background-color: $DK_MAIN;
+            border-color: $DK_MAIN;
+            &hover {
+                opacity: 75%;
+            }
+            &:focus {
+                outline: none;
+                box-shadow: none;
+                opacity: 90%;
+            }
+        }
+
+        .signup {
+            margin: 0px;
+            .link {
+                margin-left: 4px;
+                margin-right: 4px;
+                font-weight: 700;
+                color: $DK_BLACK;
+            }
+        }
+    }
+}

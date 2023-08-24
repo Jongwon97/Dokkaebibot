@@ -1,3 +1,84 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7cc1fb1e81202309b3705e5662876ed13f056ae6ad4f329e138537fa2787d300
-size 1482
+@import '../../common/mixin';
+@import '../../common/variables';
+
+.notice {
+  font-size: 2.5rem;
+}
+
+@media screen and (max-width: 758px) {
+  .notice {
+    font-size: 1.25rem;
+  }
+}
+
+.noticeDiv {
+  @include media-query-style;
+  margin-bottom: 60px;
+
+  .notice {
+    font-weight: 700;
+    text-align: center;
+    margin: 80px 0;
+  }
+
+  .button {
+    border-radius: 8px;
+    width: 160px;
+    margin-top: 12px;
+    margin-bottom: 24px;
+    background-color: $DK_MAIN;
+    border-color: $DK_MAIN;
+    &:hover {
+      background-color: $DK_MAIN;
+      border-color: $DK_MAIN;
+      opacity: 75%;
+    }
+    &:focus {
+      outline: none;
+      box-shadow: none;
+      opacity: 90%;
+    }
+  }
+
+  .noticeList {
+    height: 540px;
+    margin-top: 12px;
+    margin-bottom: 48px;
+    background-color: $DK_WHITE;
+    border: 1px solid $DK_WHITE;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px $DK_LGRAY;
+    padding: 28px;
+
+    .noticeBox {
+      overflow: auto;
+      height: 480px;
+
+      .list {
+        padding: 8px;
+        p {
+          margin: 8px 0px;
+          font-weight: 400;
+        }
+        .title {
+          font-size: 20px;
+          font-weight: 600;
+        }
+        .under {
+          margin: 0 16px 8px 0;
+          font-size: 12px;
+          color: $DK_GRAY;
+        }
+        &:hover {
+          opacity: 50%;
+        }
+      }
+      .hr {
+        width: 100%;
+        height: 0.4px;
+        background-color: $DK_LGRAY;
+        margin: auto;
+      }
+    }
+  }
+}

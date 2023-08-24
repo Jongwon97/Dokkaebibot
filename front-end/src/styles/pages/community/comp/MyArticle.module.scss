@@ -1,3 +1,69 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6bbe08518713bb0dc6b72aee690384541ace4cda27bb93d0d993e238bf1c1edd
-size 1331
+@import '../../../common/variables';
+
+.div {
+    color: $DK_BLACK;
+    text-align: center;
+    font-weight: 600;
+    background-color: $DK_WHITE;
+    border: 1px solid $DK_WHITE;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px $DK_LGRAY;
+
+    p {
+        margin: 0;
+    }
+    .name {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .icon {
+        margin: auto;
+        margin-top: 30px;
+        border-radius: 50%;
+    }
+
+    .gray {
+        color: $DK_GRAY;
+        font-weight: 400;
+        margin-top: 8px;
+        margin-bottom: 16px;
+
+        .green {
+            color: $DK_MAIN;
+        }
+    }
+    .button {
+        border-radius: 8px;
+        width: 90%;
+        margin-bottom: 16px;
+        background-color: $DK_MAIN;
+        border-color: $DK_MAIN;
+    }
+    .button:hover {
+        background-color: $DK_MAIN;
+        border-color: $DK_MAIN;
+        opacity: 75%;
+    }
+    .button:focus {
+        outline: none;
+        box-shadow: none;
+        opacity: 90%;
+    }
+
+    .login {
+        padding: 32px 12px;
+        color: $DK_GRAY;
+        font-weight: 500;
+        p {
+            margin-top: 8px;
+            .link {
+                font-weight: 600;
+                color: $DK_MAIN;
+                &:hover {
+                    opacity: 50%;
+                }
+            }
+        }
+    }
+}

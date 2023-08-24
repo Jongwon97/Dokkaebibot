@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d318f345f5130b4d823b782910dcce99aca37aef4430a6d11670ad5a8ea4892d
-size 664
+package com.dokkaebi.service;
+
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.Arrays;
+import java.util.Base64;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+
+@Slf4j
+@Service
+@RequiredArgsConstructor
+public class EncryptionService {
+  public static String encrypt(String password) throws NoSuchAlgorithmException {
+    MessageDigest digest = MessageDigest.getInstance("SHA-256");
+    return new String(Base64.getEncoder().encode(digest.digest(password.getBytes(StandardCharsets.UTF_8))));
+  }
+
+}

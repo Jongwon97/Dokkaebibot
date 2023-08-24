@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fe56ba7c670ac37e14a42063208ec3a1001f83f7175228be7daa506dd0f3aca4
-size 708
+package com.dokkaebi.domain;
+
+import com.dokkaebi.domain.studyroom.StudyRoom;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import lombok.Getter;
+import lombok.Setter;
+
+@Entity
+@Getter @Setter
+public class MemberInterest {
+	
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="interest_id")
+	private Long id;
+	
+	private String tagName;
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="member_id")
+	private Member member;
+}

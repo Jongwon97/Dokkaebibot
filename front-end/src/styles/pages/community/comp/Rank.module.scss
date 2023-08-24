@@ -1,3 +1,46 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4aac77fa499d6f994f446d433ca131ffc1cc8f0e6d976017d02c65717fa7276c
-size 754
+@import "../../../common/_mixin.scss";
+@import "../../../common/_variables.scss";
+
+.rank {
+    display: flex;
+}
+
+.rankMobile {
+    @include media-query-style;
+
+    display: none;
+    transform: translate(0, -50%); 
+
+    .rankBox {
+        width: 25rem;
+        // height: 18rem;
+    }
+}
+
+@media screen and (max-width: 758px) {
+    .rank {
+        display: none;
+    }
+    .rankMobile {
+        display: flex;
+    }
+}
+
+.div {
+    @include media-query-style;
+
+    .rank {
+        @include media-query-style;
+    
+        justify-content: space-between;
+        margin-top: 10%;
+        column-gap: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+    
+        .rankBox {
+            width: 25rem;
+            // height: 18rem;
+        }
+    }
+}

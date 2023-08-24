@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0653c89b967e205b11507b32dc194d0883d945ddf197a5b3eaa57184d281953c
-size 909
+import { client, clientWithToken } from "./client";
+
+const adminURL = 'admin/'
+
+export const postNotice = (data:object) => {
+    return clientWithToken().post(adminURL + 'notice/check', data)
+}
+
+export const getNoticeDetail = (id:string) => {
+	return client().get(adminURL + 'notice/' + id)
+}
+
+export const deleteNotice = (id:string) => {
+	return clientWithToken().delete(adminURL + 'notice/' + id + '/check')
+}
+
+export const updateNotice = (data:object) => {
+	return clientWithToken().put(adminURL + 'notice/check', data)
+}
+
+export const getNoticeList = () => {
+	return client().get(adminURL + 'notice/all')
+}
+
+export const getQnaList = () => {
+	return client().get(adminURL + 'qna/all')
+}
+
+export const postQna = (data:object) => {
+	return clientWithToken().post(adminURL + 'qna/check', data)
+}
+
+export const deleteQna = (id:string) => {
+	return clientWithToken().delete(adminURL + 'qna/' + id + '/check')
+}

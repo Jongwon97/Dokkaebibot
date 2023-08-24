@@ -1,3 +1,46 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5f33ce920c44706975f69decd707805ed101e53256e61483d707664182ed2a35
-size 1115
+services:
+  backend:
+    container_name: backend
+    depends_on:
+      - mqtt5
+      - backend_db
+    restart: on-failure
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - 127.0.0.1:8000:8080
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://backend_db:3306/dokkaebi?useSSL=false&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: ssafy
+      SPRING_DATASOURCE_PASSWORD: Ss@fyP@ss2023!
+      MQTT_URL: tcp://mqtt5:1883
+
+  backend_db:
+    container_name: backend_db
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: dokkaebi
+      MYSQL_USER: ssafy
+      MYSQL_PASSWORD: Ss@fyP@ss2023!
+    ports:
+      - 127.0.0.1:3306:3306
+    volumes:
+      - db_volume:/var/lib/mysql
+
+  mqtt5:
+    image: eclipse-mosquitto
+    container_name: mqtt5
+    ports:
+      - 1883:1883
+      # - 9001:9001 # for websockets??
+    volumes:
+      - mosquitto_config:/mosquitto/config:rw
+      - mosquitto_data:/mosquitto/data:rw
+      - mosquitto_log:/mosquitto/log:rw
+volumes:
+  db_volume:
+  mosquitto_config:
+  mosquitto_data:
+  mosquitto_log:

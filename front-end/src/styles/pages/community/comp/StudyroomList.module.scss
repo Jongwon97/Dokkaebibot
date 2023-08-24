@@ -1,3 +1,60 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8f84cd40eeebf25489175d2073538af3a513af5a26df7e483244399433d1660e
-size 1026
+@import '../../../common/mixin';
+@import '../../../common/variables';
+
+p {
+  margin: 0;
+}
+
+.midTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  .title {
+    font-size: 2rem;
+  }
+  .navText {
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration-line: none;
+    color: $DK_GRAY;
+    .search {
+      cursor: pointer;
+      &:hover {
+        opacity: 60%;
+      }
+    }
+    .inputSearch {
+      border: 1px solid $DK_LGRAY;
+      &:hover {
+        border-color: $DK_MAIN;
+      }
+      &:focus {
+        border-color: $DK_MAIN;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+}
+.myOutDiv {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: auto;
+  column-gap: 16px;
+  row-gap: 24px;
+  margin-bottom: 60px;
+}
+.outDiv {
+  @include media-query-style;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: auto;
+  column-gap: 16px;
+  row-gap: 24px;
+  margin-bottom: 60px;
+}

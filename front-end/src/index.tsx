@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e5c71fe3c6250d298ff7ee3f6e00da0fd67d6f1ab87dfaeb482fa7d0b6b6f79b
-size 723
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+import { store, persistor } from './redux/store';
+import { PersistGate } from 'redux-persist/integration/react';
+import ScrollTop from './components/ScrollTop';
+
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
+
+root.render(
+  <Provider store={store}>
+    <PersistGate persistor={persistor}>
+      <BrowserRouter>
+        <ScrollTop />
+        <App />
+      </BrowserRouter>
+    </PersistGate>
+  </Provider>,
+);
+
+reportWebVitals();

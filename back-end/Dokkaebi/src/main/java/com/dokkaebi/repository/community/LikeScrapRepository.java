@@ -1,3 +1,51 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:75167ddf068514c31afb2caa3edb54cb68f67c314cda50b56a247e7b83831fbb
-size 1536
+package com.dokkaebi.repository.community;
+
+import com.dokkaebi.domain.community.Like;
+import com.dokkaebi.domain.community.Scrap;
+import jakarta.persistence.EntityManager;
+import java.util.Optional;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Repository;
+
+@Repository
+@RequiredArgsConstructor
+public class LikeScrapRepository {
+
+  private final EntityManager entityManager;
+
+  public Optional<Like> findOneLike(Long articleId, Long memberId) {
+    String query = "SELECT l FROM Like l "
+        + "WHERE l.article.id = :articleId "
+        + "AND l.member.id = :memberId";
+    return entityManager
+        .createQuery(query, Like.class)
+        .setParameter("articleId", articleId)
+        .setParameter("memberId", memberId)
+        .getResultList().stream().findAny();
+  }
+  public Optional<Scrap> findOneScrap(Long articleId, Long memberId) {
+    String query = "SELECT s FROM Scrap s "
+        + "WHERE s.article.id = :articleId "
+        + "AND s.member.id = :memberId";
+    return entityManager
+        .createQuery(query, Scrap.class)
+        .setParameter("articleId", articleId)
+        .setParameter("memberId", memberId)
+        .getResultList().stream().findAny();
+  }
+
+  public void deleteOneLike(Like like) {
+    entityManager.remove(like);
+  }
+
+  public void saveOneLike(Like like) {
+    entityManager.persist(like);
+  }
+  public void deleteOneScrap(Scrap scrap) {
+    entityManager.remove(scrap);
+  }
+
+  public void saveOneScrap(Scrap scrap) {
+    entityManager.persist(scrap);
+  }
+}

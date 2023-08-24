@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3927cd5f85fccecc34c0552251874f3750627895d66a17d3ed87500c7bd4eb39
-size 590
+import React from 'react';
+import styles from '../../../styles/pages/members/comp/StudySetting.module.scss';
+import StudyCalendar from '../../study/comp/StudyCalendar';
+import StudyAnalysis from '../../study/comp/StudyAnalysis';
+
+function StudySetting() {
+  // 이번 달만 보여줌ㅎㅎ
+  let nowMonth = new Date().getMonth() + 1;
+
+  return (
+    <div className="StudySetting">
+      <div className={styles.basicSetting}>
+        <p>일별 공부 시간</p>
+        <StudyCalendar month={nowMonth} />
+      </div>
+      <StudyAnalysis />
+    </div>
+  );
+}
+
+export default StudySetting;

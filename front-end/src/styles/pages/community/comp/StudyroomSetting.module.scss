@@ -1,3 +1,54 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7fda0a89a65ee80190cf6bb22416330d5feed0fd45fc6bcffe226d37479fe9df
-size 965
+@import '../../../common/mixin';
+@import '../../../common/variables';
+
+.div {
+  padding: 36px;
+  width: 600px;
+  height: 400px;
+  .title {
+    .icon {
+      margin-right: 8px;
+    }
+  }
+  .content {
+    display: flex;
+    margin-top: 12px;
+    .tabNav {
+      width: 25%;
+      font-size: 18px;
+      color: $DK_GRAY;
+      margin-bottom: 36px;
+
+      .now {
+        font-weight: 500;
+        background-color: $DK_LGRAY;
+        padding: 12px 0px 12px 12px;
+        cursor: pointer;
+        &:hover {
+            opacity: 50%;
+          }
+      }
+      .next {
+        font-weight: 400;
+        padding: 12px 0px 12px 12px;
+        cursor: pointer;
+        &:hover {
+          opacity: 50%;
+        }
+      }
+    }
+    .hrCol {
+        width: 1px;
+        height: 300px;
+        background-color: $DK_LGRAY;
+    }
+    .tabContent {
+      width: 70%;
+      padding: 0 0 24px 24px;
+      .content {
+        overflow: auto;
+        height: 280px;
+      }
+    }
+  }
+}

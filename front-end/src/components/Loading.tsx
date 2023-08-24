@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c9c7d223568a0c19e4507271b11cda8dcffdfe6e39a1bf758b815f13472ab415
-size 695
+import React from 'react';
+import { ProgressSpinner } from 'primereact/progressspinner';
+
+export default function Loading() {
+    return (
+        <div style={{
+            width: '100vw', height: '100vh',
+            position: 'fixed', top: '0px', left: '0px',
+            opacity: '40%', backgroundColor: "white", zIndex: 1,
+            cursor: 'wait'
+        }}>
+            <div className="card">
+                <ProgressSpinner style={{
+                    width: '50px', height: '50px',
+                    position: 'absolute', top: '50vh', left: '50vw'
+                }} strokeWidth="6" fill="var(--surface-ground)" animationDuration=".5s" />
+            </div>
+        </div>
+    );
+}

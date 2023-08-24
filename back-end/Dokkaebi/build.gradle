@@ -1,3 +1,52 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dbef5dc63177e4feab05e0914d6bb60c8112a44aac625a2609c2cad7b2435a66
-size 1644
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.1'
+	id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.dokkaebi'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'io.jsonwebtoken:jjwt:0.9.1' // jwt 관련 라이브러리 추가 
+    implementation 'javax.xml.bind:jaxb-api:2.3.1' // javax.xml.bind 의존성 추가
+    implementation 'org.springframework.cloud:spring-cloud-starter-aws:2.2.6.RELEASE' // s3 의존성 추가
+    implementation 'org.springframework.boot:spring-boot-starter-websocket' // websocket 의존성 추가
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	//implementation 'org.springframework.boot:spring-boot-starter-security' // spring security
+	
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'com.mysql:mysql-connector-j'
+	annotationProcessor 'org.projectlombok:lombok'
+	
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// MQTT
+	implementation "org.springframework.boot:spring-boot-starter-integration"
+	implementation "org.springframework.integration:spring-integration-mqtt"
+//	implementation "org.springframework.integration:spring-integration-java-dsl:"
+
+	// JSON
+	implementation "com.google.code.gson:gson"
+}
+
+//tasks.named('test') {
+//	useJUnitPlatform()
+//}

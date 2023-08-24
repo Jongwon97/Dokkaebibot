@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9b672900d7c354b22ea9cd138437b8af125120fdaadf36087c099f3f63441075
-size 786
+//package com.dokkaebi.config;
+//
+//import org.springframework.context.annotation.Bean;
+//import org.springframework.context.annotation.Configuration;
+//import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+//import org.springframework.security.web.SecurityFilterChain;
+//import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+//import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+//
+//@Configuration
+//@EnableWebMvc
+//public class SecurityConfig {
+//    @Bean
+//    SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+//        http.authorizeHttpRequests().requestMatchers(
+//                new AntPathRequestMatcher("/**")).permitAll()
+//                ;
+//        return http.build();
+//    }
+//}

@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5128e37595616d61252ce0ff35ef59589fd26883374206b293bf3a6c32ef1c15
-size 622
+import React from 'react';
+import styles from '../../styles/pages/community/ArticleCreate.module.scss';
+import ArticleEditor from './comp/ArticleEditor';
+import CommunityHeader from './comp/CommunityHeader';
+import { useLocation } from 'react-router-dom';
+import { Article } from '../../redux/reducers/articleReducer';
+
+function ArticleCreate() {
+    const { state }:{state:Article} = useLocation()
+    return (
+        <div className={styles.article}>
+            <CommunityHeader title="자유게시판" tab='community' />
+            <ArticleEditor state={state}/>
+        </div>
+    );
+}
+
+export default ArticleCreate;

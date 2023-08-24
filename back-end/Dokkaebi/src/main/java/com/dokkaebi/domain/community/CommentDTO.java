@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:536ce3e3a077ed1eb41bae9ae6c70e5a7d703d61d3ad9576d8b4e62d0fd1eb4b
-size 603
+package com.dokkaebi.domain.community;
+
+import com.dokkaebi.domain.community.Comment;
+import com.dokkaebi.service.TimeService;
+import java.util.Date;
+import lombok.Data;
+
+@Data
+public class CommentDTO {
+  private Long id;
+  private String content;
+  private String createdAt;
+  private String writerNickname;
+  private Long writerId;
+
+  public CommentDTO(Comment comment) {
+    id = comment.getId();
+    content = comment.getContent();
+    createdAt = TimeService.toDate(comment.getCreatedAt());
+    writerNickname = comment.getWriter().getNickname();
+    writerId = comment.getWriter().getId();
+  }
+
+}

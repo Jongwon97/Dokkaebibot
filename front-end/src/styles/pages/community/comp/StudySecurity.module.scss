@@ -1,3 +1,61 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fff3c7106892a520510b4208f7cc7d197972f850088bfe998674eac590dcf8d0
-size 1079
+@import '../../../common/mixin';
+@import '../../../common/variables';
+
+.StudySecurity {
+    width: 90%;
+  .midTitle {
+    font-size: 16px;
+    color: $DK_GRAY;
+    margin: 0 0 8px 0;
+  }
+
+  .lock {
+    font-size: 16px;
+    color: $DK_BLACK;
+    margin-bottom: 32px;
+  }
+  .password {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    column-gap: 8px;
+    width: 100%;
+    .inputText {
+      width: 80%;
+      height: 36px;
+      &:hover {
+        border-color: $DK_RED;
+      }
+      &:focus {
+        border-color: $DK_RED;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+
+    .icon {
+      margin-right: 8px;
+      color: $DK_RED;
+    }
+
+    .button {
+      background-color: $DK_LGRAY;
+      border: none;
+      outline: none;
+      border-radius: 8px;
+      font-size: 12px;
+      padding: 8px 12px;
+      &:hover {
+        background-color: $DK_GRAY;
+        border: none;
+        outline: none;
+        opacity: 75%;
+      }
+      &:focus {
+        border: none;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+}

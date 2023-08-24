@@ -1,3 +1,100 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:df9e1f6162230ed41855a0154057379915bc6583003dee11f7f2dcc35b68b845
-size 2089
+@import '../../common/mixin';
+@import '../../common/variables';
+
+.title {
+    font-size: 42px;
+    line-height: 60px;
+}
+
+@media screen and (max-width: 758px) {
+    .title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+.homeDiv {
+  margin-bottom: 60px;
+
+  .beforeLogin {
+    @include media-query-style;
+    width: 100%;
+    display: flex;
+    margin-top: 140px;
+    .left {
+      z-index: 1;
+      position: absolute;
+      top: 14%;
+      transform: translateY(14%);
+      .title {
+        margin-bottom: 12%;
+        span {
+          color: $DK_MAIN;
+          font-weight: 800;
+        }
+      }
+      .signup {
+        margin-bottom: 20px;
+        height: 47px;
+        border-radius: 12px;
+        color: $DK_WHITE;
+        background-color: $DK_MAIN;
+        border-color: $DK_MAIN;
+        &:hover {
+          opacity: 75%;
+        }
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
+      }
+      p {
+        color: $DK_GRAY;
+        cursor: default;
+        .link {
+          font-weight: 700;
+          color: $DK_BLACK;
+          text-decoration: underline;
+          text-underline-offset: 3px;
+          &:hover {
+            opacity: 50%;
+          }
+        }
+      }
+    }
+    .trackBG {
+      width: 75%;
+      position: relative;
+      margin-left: auto;
+    }
+  }
+
+  .studyDiv {
+      .loggedIn {
+        position: relative;
+        .left {
+            @include media-query-style;
+          .title {
+            z-index: 1;
+            position: absolute;
+            top: 16%;
+            transform: translateY(16%);
+            margin-bottom: 48px;
+            color: $DK_WHITE;
+          }
+        }
+        img {
+          width: 100%;
+          display: block;
+        }
+        &::before {
+          position: absolute;
+          bottom: 0;
+          content: '';
+          width: 100%; /* 이미지와 동일한 너비로 설정하여 이미지와 겹치도록 함 */
+          height: 100%;
+          background: linear-gradient(0deg, rgba(253, 253, 253, 1) 10%, rgba(253, 253, 253, 0) 50%);
+        }
+      }
+  }
+}

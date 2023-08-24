@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f6686c4c25a95c02bee7342778d76df4d5dbc7ad60871aeaea35d9843bc36c74
-size 744
+@import "../common/_variables.scss";
+@import "../common/_mixin.scss";
+
+.alertDiv {
+    width: 100%;
+    .alert {
+        height: 48px;
+        padding: 8px;
+        color: $DK_GRAY;
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        .inner {
+            display: flex;
+            flex-direction: column;
+            margin-left: 16px;
+            .name {
+                font-size: 12px;
+                font-weight: 500;
+            }
+            .text {
+                color: $DK_BLACK;
+                font-size: 14px;
+            }
+        }
+        .icon {
+            margin-left: auto;
+        }
+    }
+    .alert:hover {
+        opacity: 50%;
+    }
+}

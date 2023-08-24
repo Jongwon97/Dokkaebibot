@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1358da649a11a875e932ee31cbc3289995e149b2a03327733452a2974e2a9d50
-size 531
+@import '../../../common/mixin';
+@import '../../../common/variables';
+@import '../../../common/Confirm.module.scss';
+
+.StudyExitSetting {
+    .midTitle {
+        font-size: 16px;
+        color: $DK_GRAY;
+        margin: 0 0 8px 0;
+    }
+
+    .info {
+        font-size: 12px;
+        font-weight: 400;
+        color: $DK_GRAY;
+    }
+    .button {
+        padding: 12px 0;
+        font-size: 16px;
+        font-weight: 600;
+        background: $DK_WHITE;
+        border: none;
+        color: $DK_RED;
+        cursor: pointer;
+    }
+}

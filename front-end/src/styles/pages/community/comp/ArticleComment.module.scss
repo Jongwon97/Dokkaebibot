@@ -1,3 +1,77 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a348e9306e9ef7a0b95eba97fd6cff86b0c8af8e7eb1857b35b33ae63441fa48
-size 1476
+@import '../../../common/mixin';
+@import '../../../common/variables';
+
+.review {
+  padding: 24px;
+
+  .title {
+    font-weight: 600;
+    font-size: 20px;
+    margin: 12px 0px;
+    color: $DK_BLACK;
+  }
+  .form {
+    .textArea {
+      width: 100%;
+      font-size: 13px;
+      color: $DK_GRAY;
+    }
+    .textArea:hover {
+      border-color: $DK_MAIN;
+    }
+    .textArea:focus {
+      border-color: $DK_MAIN;
+      box-shadow: none;
+    }
+    .inputButton {
+      border-radius: 8px;
+      width: 100%;
+      margin-top: 8px;
+      margin-bottom: 12px;
+      background-color: $DK_MAIN;
+      border-color: $DK_MAIN;
+    }
+    .inputButton:hover {
+      background-color: $DK_MAIN;
+      border-color: $DK_MAIN;
+      opacity: 75%;
+    }
+    .inputButton:focus {
+      outline: none;
+      box-shadow: none;
+      opacity: 90%;
+    }
+  }
+  .hr {
+    width: 100%;
+    height: 1px;
+    background-color: $DK_LGRAY;
+    margin: auto;
+  }
+  .reviewList {
+    overflow: auto;
+    max-height: 240px;
+    p {
+        font-size: 14px;
+        margin: 12px 0px 8px 0px;
+      }
+      .list {
+        display: flex;
+        flex-direction: column;
+        padding: 4px;
+    
+        .name {
+            font-size: 12px;
+            margin: 0px 0px 12px 0px;
+            color: $DK_GRAY;
+            
+            .icon {
+              vertical-align:middle;
+              font-size: 12px;
+              margin-left: 4px;
+              cursor: pointer;
+          }
+        }
+      }
+  }
+}

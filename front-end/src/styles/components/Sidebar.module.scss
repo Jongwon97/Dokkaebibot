@@ -1,3 +1,91 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bc0b54afc21bfd94147ab3f360a2caa027b667b3a6b9f1fdfa30952708b79c15
-size 1729
+@import '../common/_variables.scss';
+@import '../common/_mixin.scss';
+
+.sideBarDiv {
+  .myPage {
+    width: 80%;
+    margin-bottom: 36px;
+    .top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      .profile {
+        display: flex;
+        align-items: center;
+        margin-right: 36px;
+        .name {
+          display: flex;
+          flex-direction: column;
+          margin-left: 12px;
+          font-size: 14px;
+          color: $DK_GRAY;
+          .nickname {
+            font-weight: 600;
+            font-size: 16px;
+            color: $DK_BLACK;
+          }
+        }
+        &:hover {
+          opacity: 50%;
+        }
+      }
+      .logOut {
+        background-color: $DK_LGRAY;
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        font-size: 12px;
+        padding: 8px 12px;
+        margin-left: auto;
+        color: $DK_WHITE;
+        cursor: pointer;
+        &:hover {
+          background-color: $DK_LGRAY;
+          border: none;
+          outline: none;
+          opacity: 50%;
+        }
+        &:focus {
+          border: none;
+          outline: none;
+          box-shadow: none;
+        }
+      }
+    }
+    .hr {
+      margin-bottom: 12px;
+      height: 0.8px;
+      background-color: $DK_LGRAY;
+    }
+
+    .midTitle {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color: $DK_GRAY;
+      margin-bottom: 8px;
+    }
+  }
+
+  .sideNav {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    .navText {
+      margin-bottom: 24px;
+      &:hover {
+        font-weight: 700;
+      }
+    }
+  }
+}
+.navToggle {
+  color: $DK_MAIN;
+  cursor: pointer;
+  &:hover {
+    opacity: 75%;
+  }
+}
+
+

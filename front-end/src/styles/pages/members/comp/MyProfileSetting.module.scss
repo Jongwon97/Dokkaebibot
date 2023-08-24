@@ -1,3 +1,188 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3aee9a7bfe6aa6d6aca393e6f9e99bfeff0bec9293ad54ea2febebe6e661ffdf
-size 3361
+@import '../../../common/mixin';
+@import '../../../common/variables';
+
+p {
+  margin: 0;
+}
+
+:global {
+  .p-chips .p-chips-multiple-container {
+    width: 100%;
+    height: 36px;
+    flex-wrap: nowrap;
+  }
+  .p-chips .p-chips-multiple-container .p-chips-token {
+    color: $DK_GRAY;
+    background: $DK_LGRAY;
+    border-radius: 24px;
+    padding: 0;
+  }
+  .p-chips-input-token input {
+    overflow: hidden;
+  }
+  .p-chips .p-chips-multiple-container .p-chips-input-token {
+    padding: 0;
+  }
+  .p-chips .p-chips-multiple-container .p-chips-token .p-chips-token-icon {
+    margin: 0 6px 0 -4px;
+  }
+  .p-chips .p-chips-multiple-container:not(.p-disabled):hover {
+    border: 1px solid $DK_MAIN;
+  }
+  .p-chips .p-chips-multiple-container:not(.p-disabled).p-focus {
+    border: 1px solid $DK_MAIN;
+    outline: $DK_MAIN;
+    box-shadow: none;
+  }
+}
+
+.basicSetting {
+  width: 100%;
+  border: 1px solid $DK_MAIN;
+  border-radius: 12px;
+  padding: 18px 28px;
+  color: $DK_GRAY;
+  
+  .inputText {
+    width: 80%;
+    height: 36px;
+    &:hover {
+      border-color: $DK_MAIN;
+    }
+    &:focus {
+      border-color: $DK_MAIN;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+  .button {
+    background-color: $DK_LGRAY;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 8px 12px;
+    margin-left: auto;
+    &:hover {
+      background-color: $DK_GRAY;
+      border: none;
+      outline: none;
+      opacity: 75%;
+    }
+    &:focus {
+      border: none;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  .hr {
+    height: 1px;
+    width: 100%;
+    background-color: $DK_LGRAY;
+    margin: 8px 0px;
+  }
+
+  .nickname {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    .icon {
+      width: 60px;
+      height: 60px;
+    }
+    .name {
+      flex-direction: column;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 700;
+      color: $DK_BLACK;
+      margin-left: 28px;
+      .email {
+        font-size: 14px;
+        font-weight: 400;
+        color: $DK_GRAY;
+      }
+    }
+  }
+  .log {
+    display: flex;
+    align-items: center;
+  }
+  .sns {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .interestChip {
+      margin-right: 4px;
+    }
+    .chipInput {
+      width: 80%;
+    }
+  }
+}
+
+.passwordSetting {
+  width: 100%;
+  border: 1px solid $DK_LGRAY;
+  border-radius: 12px;
+  padding: 10px 28px;
+  margin-top: 8px;
+  color: $DK_GRAY;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .inputText {
+    width: 100%;
+    height: 36px;
+    margin: 4px 0;
+    &:hover {
+      border-color: $DK_RED;
+    }
+    &:focus {
+      border-color: $DK_RED;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+  .error {
+    font-size: 13px;
+    color: $DK_RED;
+  }
+
+  .icon {
+    margin-right: 8px;
+    color: $DK_RED;
+  }
+
+  .formPW {
+    display: flex;
+    flex-direction: column;
+    .three {
+      margin-left: 24px;
+      margin-bottom: 4px;
+    }
+  }
+
+  .button {
+    background-color: $DK_LGRAY;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 8px 12px;
+    margin-left: auto;
+    &:hover {
+      background-color: $DK_GRAY;
+      border: none;
+      outline: none;
+      opacity: 75%;
+    }
+    &:focus {
+      border: none;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}

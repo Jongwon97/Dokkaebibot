@@ -1,3 +1,112 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e32078baa6f3e0f432f82fcadb58f4bd6f9cb178a6da55cba668a0058dc1ea07
-size 2270
+@import '../../../common/mixin';
+@import '../../../common/variables';
+
+p {
+  margin: 0;
+}
+
+.robotDiv {
+  display: flex;
+  justify-content: space-between;
+  .robotList {
+    width: 40%;
+    height: 100%;
+    border: 1px solid $DK_MAIN;
+    border-radius: 12px;
+    padding: 18px 24px;
+    color: $DK_GRAY;
+    .top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      .edit {
+        cursor: pointer;
+      }
+    }
+    .bottom {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      .iot {
+        margin: auto;
+        padding: 16px 0 20px 0;
+      }
+      .serial {
+        margin: 8px 0;
+        .linked {
+          color: $DK_BLACK;
+        }
+      }
+      .button {
+        background-color: $DK_LGRAY;
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        font-size: 12px;
+        padding: 8px 12px;
+        margin-left: auto;
+        &:hover {
+          background-color: $DK_GRAY;
+          border: none;
+          outline: none;
+          opacity: 75%;
+        }
+        &:focus {
+          border: none;
+          outline: none;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  .linkDiv {
+    width: 58%;
+    height: 100%;
+    border: 1px solid $DK_LGRAY;
+    border-radius: 12px;
+    padding: 18px 28px;
+    color: $DK_GRAY;
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+    .electron {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 12px;
+      row-gap: 20px;
+      .item {
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 8px;
+        .button {
+          margin-top: 8px;
+          background-color: $DK_LGRAY;
+          border: none;
+          outline: none;
+          border-radius: 8px;
+          font-size: 12px;
+          padding: 8px 12px;
+          &:hover {
+            background-color: $DK_GRAY;
+            border: none;
+            outline: none;
+            opacity: 75%;
+          }
+          &:focus {
+            border: none;
+            outline: none;
+            box-shadow: none;
+          }
+        }
+        .linkedButton {
+          background-color: $DK_MAIN;
+        }
+      }
+    }
+  }
+}

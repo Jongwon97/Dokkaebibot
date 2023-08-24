@@ -1,3 +1,47 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cf2b8825afd31aa2172099e48b09c3820934253d0e5f338845e0c0c68e954ddc
-size 872
+@import "../../common/_variables.scss";
+@import "../../common/_mixin.scss";
+
+@media screen and (max-width: 758px) {
+    .postInner {
+        flex-direction: column;
+        .profile {
+            width: 100%;
+        }
+        .postList {
+            width: 100%;
+        }
+    }
+}
+
+.community {
+    display: flex;
+    flex-direction: column;
+
+    .post {
+        @include media-query-style;
+        margin-bottom: 80px;
+
+        .midTitle {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .postInner {
+            display: flex;
+            justify-content: space-between;
+            column-gap: 24px;
+
+            .profile {
+                width: 30%;
+            }
+            .postList {
+                width: 70%;
+            }
+        }
+    }
+
+    .study {
+        @include media-query-style;
+    }
+}

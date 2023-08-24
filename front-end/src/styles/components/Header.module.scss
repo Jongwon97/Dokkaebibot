@@ -1,3 +1,128 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f05afd60f953a02ec7f5376d82d31fcc638ae452cea5151c054a05805970d078
-size 1926
+@import '../common/_variables.scss';
+@import '../common/_mixin.scss';
+
+.hidden {
+  display: none;
+}
+
+.nav {
+  display: flex;
+}
+
+.buttons {
+  display: block;
+}
+.loggedIn {
+  display: flex;
+}
+
+@media screen and (max-width: 758px) {
+  .hidden {
+    display: flex;
+    margin-right: 5%;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .buttons {
+    display: none;
+  }
+  .loggedIn {
+    display: none;
+  }
+}
+
+.header {
+  @include media-query-style;
+  height: 72px;
+  font-size: 16px;
+  font-weight: 600;
+  color: $DK_BLACK;
+  background-color: $DK_WHITE;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .nav {
+    align-items: center;
+
+    .navText {
+      margin-left: 40px;
+      font-size: 16px;
+      font-weight: 500;
+      color: $DK_BLACK;
+      text-decoration: none;
+    }
+  }
+
+  .loggedIn {
+    margin-left: auto;
+    align-items: center;
+    cursor: pointer;
+    .userName {
+      margin: 0px 16px 0px 0px;
+    }
+  }
+  .loggedIn:hover {
+    opacity: 75%;
+  }
+
+  .buttons {
+    margin-left: auto;
+    display: flex;
+
+    .signin {
+      height: 47px;
+      font-size: 17px;
+      border-radius: 8px;
+      color: $DK_MAIN;
+      font-weight: 700;
+      text-align: center;
+      padding: 12px 20px;
+      margin: 0 12px 0 0;
+      &:hover {
+        color: $DK_MAIN;
+        opacity: 75%;
+      }
+      &:focus {
+        outline: none;
+        box-shadow: none;
+        background-color: none;
+      }
+    }
+
+    .signup {
+      height: 47px;
+      border-radius: 8px;
+      color: $DK_WHITE;
+      background-color: $DK_MAIN;
+      border-color: $DK_MAIN;
+      &:hover {
+        opacity: 75%;
+      }
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .hidden {
+    margin-left: auto;
+  }
+    
+}
+
+:global {
+  .p-sidebar-right .p-sidebar-content {
+    padding-left: 48px;
+  }
+  .p-sidebar-right .p-sidebar {
+    width: 100%;
+  }
+  .pi-bars:before {
+    font-size: 24px;
+  }
+}

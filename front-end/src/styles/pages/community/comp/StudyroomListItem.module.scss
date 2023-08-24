@@ -1,3 +1,72 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2f10f5e5512ae89f2ec044132219b9e38893e723220602c9985c8462aac0634a
-size 1675
+@import '../../../common/mixin';
+@import '../../../common/variables';
+
+.outDiv {
+    width: 192px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px $DK_LGRAY;
+    cursor: pointer;
+    .headerImg {
+        width: 100%;
+        height: 128px;
+        border-radius: 12px 12px 0px 0px;
+    }
+    .innerDiv {
+        padding: 0 12px 12px 12px;
+        .title {
+            margin: 12px 0px 8px 4px;
+            font-weight: 700;
+            :global(.pi-lock:before) {
+                margin-right: 4px;
+                font-size: 14px;
+                font-weight: 700;
+            }
+            .icon {
+                margin-left: 8px;
+                cursor:grab;
+                margin-left: 8px;
+            }
+        }
+        .numMember {
+            margin: 0px 0px 12px 4px;
+            font-weight: 600;
+            font-size: 14px;
+            color: $DK_GRAY;
+        }
+        .chipDiv {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 4px;
+            row-gap: 4px;
+        }
+    }
+}
+
+.myList {
+    border-radius: 8px;
+    border: 1px solid $DK_LGRAY;
+    width: 168px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    
+    .image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    .listDiv {
+        z-index: 1;
+        background: linear-gradient(145deg, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0.1) 100%);
+        position: relative;
+        font-weight: 600;
+        font-size: 16px;
+        padding: 12px 12px;
+        .numMember {
+            margin-top: 4px;
+            font-weight: 400;
+            font-size: 14px;
+            color: $DK_GRAY;
+        }
+    }
+}

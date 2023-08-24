@@ -1,3 +1,141 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:861fab04179adcbc6d6269629935aa67c6585223b59c1b6c2775d9aa2bbdb158
-size 2946
+@import '../../../common/mixin';
+@import '../../../common/variables';
+
+.modalDiv {
+  .modalContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .message {
+    width: 100%;
+    margin-top: 8px;
+    cursor: pointer;
+  }
+
+  .modalBackdrop {
+    z-index: 3; //위치지정 요소
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(13, 13, 13, 0.45);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    .modalView {
+      background-color: $DK_WHITE;
+      margin: auto;
+      width: 420px;
+      border-radius: 20px;
+      overflow: auto;
+      position: absolute;
+      padding: 16px 24px 24px 24px;
+
+      .exitBtn {
+        display: flex;
+        position: absolute;
+        z-index: 4;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        left: 90%;
+        top: 2%;
+        transform: (2%, 90%);
+        font-weight: 600;
+        &:hover {
+          opacity: 50%;
+        }
+      }
+
+      .top {
+        display: flex;
+        align-items: baseline;
+        column-gap: 12px;
+
+        .lockIcon {
+          margin-right: 8px;
+          font-weight: 600;
+        }
+        span {
+          color: $DK_GRAY;
+        }
+      }
+
+      .btnDiv {
+        margin-top: 24px;
+        display: flex;
+        justify-content: space-between;
+        .rejectBtn {
+          width: 40%;
+          border: none;
+          text-align: center;
+          background-color: transparent;
+          color: $DK_GRAY;
+          font-size: 16px;
+          font-weight: 600;
+          cursor: pointer;
+          &:hover {
+            opacity: 50%;
+          }
+        }
+        .enterBtn {
+          width: 58%;
+          background-color: $DK_MAIN;
+          border: $DK_MAIN;
+          border-radius: 8px;
+          &:hover {
+            opacity: 50%;
+          }
+        }
+      }
+
+      .lockRoom {
+        .password {
+          font-size: 16px;
+          outline: none;
+          border: 1px solid $DK_LGRAY;
+          width: 100%;
+          color: $DK_BLACK;
+          padding: 12px 8px;
+          margin-top: 12px;
+          background-color: transparent;
+          border-radius: 8px;
+          &:hover {
+            opacity: 50%;
+            border-color: $DK_MAIN;
+          }
+          &:focus {
+            border-color: $DK_MAIN;
+          }
+        }
+        .error {
+            color: $DK_RED;
+            margin: 8px 0 0 8px;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        .submitBtn {
+          background-color: $DK_MAIN;
+          border: none;
+          width: 100%;
+          border-radius: 8px;
+          margin: auto;
+          margin-top: 8px;
+          &:hover {
+            opacity: 50%;
+          }
+          &:focus {
+            outline: none;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+}

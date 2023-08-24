@@ -1,3 +1,158 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f2e58b5bc820369d1cf60a6414004f657b8a9fd0356772b79c5d137282168ea6
-size 4966
+@import "../../common/variables";
+@import "../../common/mixin";
+
+.div {
+    display: flex;
+    flex-direction: column;
+
+    .detailBox {
+        @include media-query-style;
+        z-index: 1;
+        margin-top: -80px;
+
+        .left {
+            width: 60px;
+            height: 60px;
+            border: 3px solid $DK_WHITE;
+            border-radius: 50%;
+            text-align: center;
+            padding-top: 15px;
+            font-size: 24px;
+            color: $DK_WHITE;
+            margin-bottom: 16px;
+        }
+    
+        .detailInner {
+            @include media-query-style;
+            display: flex;
+            justify-content: space-between;
+            column-gap: 24px;
+            height: 500px;
+            margin-top: 12px;
+            margin-bottom: 60px;
+    
+            .detail {
+                width: 70%;
+                background-color: $DK_WHITE;
+                border: 1px solid $DK_WHITE;
+                border-radius: 12px;
+                box-shadow: 0px 4px 8px $DK_LGRAY;
+                padding: 36px;
+                color: $DK_GRAY;
+
+                .title {
+                    font-weight: 700;
+                    font-size: 24px;
+                    margin: 12px 0px;
+                    color: $DK_BLACK;
+
+                    .icon {
+                        vertical-align:middle;
+                        margin-left: 8px;
+                        cursor: pointer;
+                    }
+                }
+
+                .hr {
+                    width: 100%;
+                    height: 1px;
+                    background-color: $DK_LGRAY;
+                    margin: 12px 0px;
+                }
+
+                .content {
+                    line-height: 1.6;
+                    overflow: auto;
+                    height: 240px;
+                }
+
+                .button {
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    column-gap: 8px;
+                    margin-top: 20px;
+
+                    p {
+                        margin: 4px 12px 4px 4px;
+                        font-weight: 700;
+                    }
+
+                    .liked {
+                        background-color: $DK_WHITE;
+                        color: $DK_RED;
+                        border: 1.4px solid $DK_RED;
+                        border-radius: 8px;
+                        display: flex;
+                    }
+                    .liked:hover {
+                        opacity: 75%;
+                    }
+                    .liked:focus {
+                        outline: none;
+                        box-shadow: none;
+                    }
+                    .unliked {
+                        background-color: $DK_WHITE;
+                        border: 1.4px solid $DK_LGRAY;
+                        color: $DK_LGRAY;
+                        border-radius: 8px;
+                        display: flex;
+                    }
+                    .unliked:hover {
+                        background-color: $DK_LGRAY;
+                        border: 1px solid $DK_GRAY;
+                        color: $DK_GRAY;
+                        opacity: 25%;
+                    }
+                    .unliked:focus {
+                        border-color: 1px solid $DK_LGRAY;
+                        outline: none;
+                        box-shadow: none;
+                    }
+
+                    .scraped {
+                        background-color: $DK_WHITE;
+                        color: $DK_YELLOW;
+                        border: 1.4px solid $DK_YELLOW;
+                        border-radius: 8px;
+                        display: flex;
+                    }
+                    .scraped:hover {
+                        opacity: 75%;
+                    }
+                    .scraped:focus {
+                        outline: none;
+                        box-shadow: none;
+                    }
+                    .unscraped {
+                        background-color: $DK_WHITE;
+                        border: 1.4px solid $DK_LGRAY;
+                        color: $DK_LGRAY;
+                        border-radius: 8px;
+                        display: flex;
+                    }
+                    .unscraped:hover {
+                        background-color: $DK_LGRAY;
+                        border: 1px solid $DK_GRAY;
+                        color: $DK_GRAY;
+                        opacity: 25%;
+                    }
+                    .unscraped:focus {
+                        border-color: 1px solid $DK_LGRAY;
+                        outline: none;
+                        box-shadow: none;
+                    }
+                }
+            }
+    
+            .review {
+                width: 30%;
+                background-color: $DK_WHITE;
+                border: 1px solid $DK_WHITE;
+                border-radius: 12px;
+                box-shadow: 0px 4px 8px $DK_LGRAY;
+            }
+        }
+    }
+}

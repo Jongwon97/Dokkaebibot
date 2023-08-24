@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a9ff8ee7defe3a5cf2b14d8ff6396b861c44c1f95435e2e6f6a1904b18a44585
-size 910
+package com.dokkaebi.domain.community;
+
+import static java.util.stream.Collectors.toList;
+
+import com.dokkaebi.domain.Member;
+import com.dokkaebi.domain.community.Friend;
+import com.dokkaebi.repository.MemberRepository;
+import com.dokkaebi.repository.community.InviteRepository;
+import com.dokkaebi.repository.community.MessageRepository;
+import java.util.Objects;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+@Data
+public class FriendDTO {
+
+  private Long id;
+  private Long friendId;
+  private String friendEmail;
+  private String friendNickname;
+  private Integer friendIconNumber;
+  private Boolean isNewMessage;
+
+  public FriendDTO(Friend f, Member friend) {
+    id = f.getId();
+    friendId = friend.getId();
+    friendEmail = friend.getEmail();
+    friendNickname = friend.getNickname();
+    friendIconNumber = friend.getIconNumber();
+  }
+}

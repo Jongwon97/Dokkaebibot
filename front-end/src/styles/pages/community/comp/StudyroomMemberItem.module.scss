@@ -1,3 +1,90 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5ed3752040ecf86b2941cc8d4a36c300cbcc40d478af823f5044148588f5d0d9
-size 1524
+@import '../../../common/mixin';
+@import '../../../common/variables';
+
+.memberDiv {
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+}
+
+.on, .off {
+    margin: 108px 0px 12px 84px;
+}
+
+.text {
+    .name, .timer {
+        text-align: center;
+    }
+    .message {
+        text-align: end;
+    }
+}
+
+@media screen and (max-width: 758px) {
+    .memberDiv {
+        flex-direction: row;
+        width: 100%;
+    }
+    .on, .off {
+        margin: 108px 36px 12px 98px;
+    }
+    .text {
+        // margin-left: auto;
+        .name, .timer, .message {
+            text-align: left;
+        }
+    }
+}
+
+.memberDiv {
+  align-items: center;
+  background-color: $DK_WHITE;
+  border: 2px solid $DK_WHITE;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px $DK_LGRAY;
+  padding: 24px;
+  font-weight: 500;
+  font-size: 18px;
+  .icon {
+    border: 1px solid $DK_LGRAY;
+    border-radius: 50%;
+    overflow: auto;
+    position: absolute;
+  }
+
+  .on {
+    width: 14px;
+    height: 14px;
+    z-index: 1;
+    background-color: $DK_MAIN;
+    border-radius: 50%;
+  }
+  .off {
+    width: 14px;
+    height: 14px;
+    z-index: 1;
+    background-color: $DK_GRAY;
+    border-radius: 50%;
+  }
+
+  .text {
+    width: 100%;
+      .name {
+        margin-top: 8px;
+        .host {
+          font-size: 14px;
+        }
+      }
+    
+      .timer {
+        font-size: 32px;
+        font-weight: 600;
+        margin-top: 8px;
+      }
+      // .message {
+      //   width: 100%;
+      //   margin-top: 8px;
+      //   cursor: pointer;
+      // }
+  }
+}

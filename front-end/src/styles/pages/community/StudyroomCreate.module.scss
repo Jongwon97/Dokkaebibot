@@ -1,3 +1,195 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:764d14a96953f890fa745585e16ac3559682e2d78e9bedf8959c7120971f8d23
-size 4065
+@import '../../common/mixin';
+@import '../../common/variables';
+
+input {
+  color: transparent;
+}
+input::file-selector-button {
+  display: none;
+}
+input[type=checkbox] {
+  width: 16px;
+  height: 16px;
+  accent-color: $DK_LGRAY;
+  border-radius: 4px;
+}
+
+:global{
+  .p-dropdown .p-dropdown-label.p-placeholder {
+    padding: 0px;
+  }
+  .p-dropdown .p-dropdown-label {
+    padding: 0px;
+  }
+  .p-dropdown:not(.p-disabled).p-focus {
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid $DK_MAIN;
+  }
+  .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+    background-color: $DK_LightG;
+    color: $DK_DarkG;
+  }
+
+  .p-chips .p-chips-multiple-container {
+    width: 100%;
+    height: 36px;
+    flex-wrap: nowrap;
+  }
+  .p-chips .p-chips-multiple-container .p-chips-token {
+    color: $DK_GRAY;
+    background: $DK_LGRAY;
+    border-radius: 24px;
+    padding: 0;
+  }
+  .p-chips-input-token input {
+    overflow: hidden;
+  }
+  .p-chips .p-chips-multiple-container .p-chips-input-token {
+    padding: 0;
+  }
+  .p-chips .p-chips-multiple-container .p-chips-token .p-chips-token-icon {
+    margin: 0 6px 0 -4px;
+  }
+  .p-chips .p-chips-multiple-container:not(.p-disabled):hover {
+    border: 1px solid $DK_MAIN;
+  }
+  .p-chips .p-chips-multiple-container:not(.p-disabled).p-focus {
+    border: 1px solid $DK_MAIN;
+    outline: $DK_MAIN;
+    box-shadow: none;
+  }
+}
+
+
+.div {
+  .image {
+    height: 300px;
+    width: 100%;
+    background-color: $DK_LGRAY;
+
+    .uploadedImg {
+      display: flex;
+      position: absolute;
+      width: 100%;
+      height: 300px;
+      border-radius: 20px 20px 0px 0px;
+    }
+    .uploadBtn {
+      width: 500px;
+      height: 300px;
+      cursor: pointer;
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%, -25%);
+      justify-content: center;
+      align-items: center;
+      margin-top: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      .icon {
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+    }
+  }
+  .content {
+    padding: 8px 28px 20px 28px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    .title {
+      font-size: 16px;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid $DK_LGRAY;
+      width: 80%;
+      color: $DK_BLACK;
+      padding: 8px;
+      background-color: transparent;
+      margin: 4px 0px;
+      &:hover {
+        opacity: 50%;
+        border-color: $DK_MAIN;
+      }
+      &:focus {
+        border-color: $DK_MAIN;
+      }
+    }
+
+    .maxCapacity {
+      width: 80%;
+      background-color: transparent;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid $DK_LGRAY;
+      border-radius: 0px;
+      padding: 8px;
+      margin: 4px 0px;
+      &:hover {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid $DK_MAIN;
+        opacity: 50%;
+      }
+      &:focus {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid $DK_MAIN;
+        box-shadow: 0 0 0 0.1rem $DK_LightG;
+      }
+    }
+    .tag {
+      margin-top: 8px;
+      width: 100%;
+    }
+    .checkBox {
+      display: flex;
+      align-items: baseline;
+      font-weight: 500;
+      justify-content: space-between;
+      margin: 8px 0;
+      .lock {
+        margin-right: 8px;
+      }
+      .password {
+        font-size: 16px;
+        outline: none;
+        border: 1px solid $DK_LGRAY;
+        width: 70%;
+        color: $DK_BLACK;
+        padding: 12px 8px;
+        background-color: transparent;
+        border-radius: 8px;
+        &:hover {
+          opacity: 50%;
+          border-color: $DK_MAIN;
+        }
+        &:focus {
+          border-color: $DK_MAIN;
+        }
+      }
+    }
+
+    .submitBtn {
+      background-color: $DK_MAIN;
+      border: none;
+      width: 100%;
+      border-radius: 8px;
+      margin: auto;
+      margin-top: 4px;
+      &:hover {
+        opacity: 50%;
+      }
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+}

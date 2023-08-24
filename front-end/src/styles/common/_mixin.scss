@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e6a4a4ad17597a9786fa66c6033b015179692b5c0fa83e797bfc9b83af4d8355
-size 571
+@import "./variables";
+
+@mixin mobile {
+    @media (min-width: #{$screen-mobile}) and (max-width: #{$screen-tablet - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$screen-tablet}) and (max-width: #{$screen-desktop - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$screen-desktop}) {
+        @content;
+    }
+}
+
+@mixin media-query-style {
+    margin: auto;
+    @include desktop {
+      width: 1024px; //1160px
+    }
+    @include tablet {
+      width: 758px;
+    }
+    @include mobile {
+      width: 335px;
+    }
+}

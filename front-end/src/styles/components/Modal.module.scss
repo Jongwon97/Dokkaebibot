@@ -1,3 +1,102 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:259185a23fed31a7817190564bca04afe0ccb1570a3d3637adce9cdb4367dc76
-size 1932
+@import '../common/mixin';
+@import '../common/variables';
+
+.modalDiv {
+  .modalContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .modalBtn {
+    border-radius: 8px;
+    background-color: $DK_MAIN;
+    border-color: $DK_MAIN;
+    margin-bottom: 18px;
+    width: 90%;
+    &:hover {
+      background-color: $DK_MAIN;
+      border-color: $DK_MAIN;
+      opacity: 75%;
+    }
+    &:focus {
+      outline: none;
+      box-shadow: none;
+      opacity: 90%;
+    }
+  }
+
+  .studyChat {
+    z-index: 2;
+    margin-left: auto;
+    font-size: 24px;
+    color: $DK_WHITE;
+    width: 60px;
+    height: 60px;
+    border: 3px solid $DK_WHITE;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .studySetting {
+    z-index: 2;
+    margin-left: auto;
+    font-size: 24px;
+    color: $DK_WHITE;
+    width: 60px;
+    height: 60px;
+    border: 3px solid $DK_WHITE;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .message {
+    width: 100%;
+    margin-top: 8px;
+    cursor: pointer;
+  }
+
+  .modalBackdrop {
+    z-index: 3; //위치지정 요소
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(13, 13, 13, 0.45);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    .modalView {
+      background-color: $DK_WHITE;
+      margin: auto;
+      border-radius: 20px;
+      overflow: auto;
+      position: absolute;
+
+      .exitBtn {
+        display: flex;
+        position: absolute;
+        z-index: 4;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        left: 90%;
+        top: 2%;
+        transform: (2%, 90%);
+        font-weight: 600;
+        &:hover {
+          opacity: 50%;
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,97 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:36f828019a5d5e23917e81162ea3d5b7b8f0f27c71e03e8149155de708f72b44
-size 2251
+@import "../../common/_variables.scss";
+@import "../../common/_mixin.scss";
+
+.signup {
+    color: $DK_WHITE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    height: 624px;
+
+    .box {
+        width: 506px;
+        background-color: $DK_WHITE;
+        border-radius: 12px;
+        color: $DK_BLACK;
+        text-align: center;
+        box-shadow: 2px 4px 12px $DK_LGRAY;
+
+        .title {
+            margin-top: 35px;
+            margin-bottom: 36px;
+        }
+
+        .left {
+            width: 424px;
+            margin: auto;
+            text-align: left;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .inputBox {
+            width: 424px;
+            margin-bottom: 8px;
+            border-radius: 12px;
+            &:hover {
+                outline: none;
+                border-color: $DK_MAIN;
+            }
+            &:focus {
+                outline: none;
+                box-shadow: none;
+                border-color: $DK_MAIN;
+            }
+        }
+        .errorText {
+            font-size: 14px;
+            color: $DK_RED;
+            margin: -4px 0 8px 0;
+            text-align: left;
+            padding-left: 48px;
+        }
+        .error {
+            &:hover {
+                border-color: $DK_RED;
+            }
+            &:focus {
+                box-shadow: none;
+                border-color: $DK_RED;
+            }
+        }
+        .inputButton {
+            border-radius: 12px;
+            width: 424px;
+            margin-bottom: 12px;
+            background-color: $DK_MAIN;
+            border-color: $DK_MAIN;
+        }
+        .inputButton:hover {
+            opacity: 75%;
+        }
+        .inputButton:focus {
+            outline: none;
+            box-shadow: none;
+            opacity: 90%;
+        }
+
+        .login {
+            margin: 0px;
+            margin-bottom: 20px;
+            .link {
+                margin-left: 4px;
+                margin-right: 4px;
+                font-weight: 700;
+                color: $DK_BLACK;
+            }
+        }
+    }
+
+    .privacy {
+        margin-top: 24px;
+        font-size: 12px;
+        font-weight: 300;
+        color: $DK_GRAY;
+    }
+}

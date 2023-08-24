@@ -1,3 +1,71 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:360ae771693878ec5c2644680ea5bc9d8f2834c3e57c7d28f451f203a91dff6b
-size 1471
+@import './mixin';
+@import './variables';
+
+:global {
+    .pi-exclamation-circle:before {
+        font-size: 20px;
+        color: $DK_RED;
+    }
+    .p-dialog {
+        border-radius: 12px;
+    }
+    .p-dialog.p-confirm-dialog .p-confirm-dialog-message {
+        margin: 0;
+    }
+    .p-button:enabled:active {
+        background: none;
+        border: none;
+    }
+    .p-button:enabled:hover {
+        background-color: $DK_MAIN;
+    }
+    .p-button.p-button-text:enabled:active {
+        background: none;
+        border: none;
+    }
+    .p-dialog .p-dialog-header {
+        padding: 40px 0px 0px 0px;
+        border-top-right-radius: 12px;
+        border-top-left-radius: 12px;
+    }
+    .p-dialog .p-dialog-header .p-dialog-title {
+        text-align: center;
+    }
+    .p-dialog .p-dialog-content {
+        padding: 16px 36px 20px 36px;
+        font-weight: 600;
+    }
+    .p-dialog .p-dialog-footer {
+        padding: 0 12px 20px 12px;
+        border-bottom-right-radius: 12px;
+        border-bottom-left-radius: 12px;
+    }
+}
+
+.accept {
+    background-color: $DK_MAIN;
+    border: none;
+    border-radius: 8px;
+    &:hover {
+        background-color: $DK_MAIN;
+        opacity: 50%;
+    }
+    &:focus {
+        box-shadow: none;
+        outline: none;
+    }
+}
+.reject {
+    span {
+        color: $DK_GRAY;
+        opacity: 75%;
+    }
+    border: none;
+    &:hover {
+        opacity: 50%;
+    }
+    &:focus {
+        box-shadow: none;
+        outline: none;
+    }
+}

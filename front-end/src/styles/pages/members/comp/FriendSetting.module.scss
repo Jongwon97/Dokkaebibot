@@ -1,3 +1,136 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fac2364648132ce8d4bfe2b550f82da63872e1aa5e2303f79596574b40b41c32
-size 2683
+@import '../../../common/mixin';
+@import '../../../common/variables';
+@import '../../../common/Confirm.module.scss';
+
+p {
+  margin: 0;
+}
+.friendList {
+  width: 40%;
+}
+.studyroom {
+  width: 58%;
+}
+
+@media screen and (max-width: 1024px) {
+  
+  @media screen and (max-width: 758px) {
+    .friendDiv {
+      flex-direction: column;
+      row-gap: 12px;
+      .friendList {
+        width: 100%;
+      }
+      .studyroom {
+        display: none;
+      }
+    }
+  }
+}
+
+.friendDiv {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  .friendList {
+    height: 100%;
+    border: 1px solid $DK_MAIN;
+    border-radius: 12px;
+    padding: 18px 24px;
+    color: $DK_GRAY;
+    .top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      .edit {
+        cursor: pointer;
+      }
+    }
+    .listItem {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 8px 0px;
+      .left {
+        display: flex;
+        align-items: center;
+        color: $DK_BLACK;
+        font-size: 16px;
+        font-weight: 700;
+        .p {
+          margin: 2px 0px 0px 4px;
+        }
+      }
+      .button {
+        background-color: $DK_LGRAY;
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        font-size: 12px;
+        padding: 8px 12px;
+        margin-left: auto;
+        &:hover {
+          background-color: $DK_GRAY;
+          border: none;
+          outline: none;
+          opacity: 75%;
+        }
+        &:focus {
+          border: none;
+          outline: none;
+          box-shadow: none;
+        }
+      }
+      .message {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        margin-top: 2px;
+        font-size: 18px;
+
+        .alert {
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          margin: 0px 0px 1px 12px;
+          background-color: $DK_RED;
+          border-radius: 50%;
+          border: 1.4px solid $DK_WHITE;
+        }
+      }
+    }
+    .noFriend {
+      text-align: center;
+    }
+  }
+  .studyroom {
+    height: 100%;
+    border: 1px solid $DK_LGRAY;
+    border-radius: 12px;
+    padding: 18px 28px;
+    color: $DK_GRAY;
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      .edit {
+        cursor: pointer;
+      }
+    }
+
+    .myDiv {
+        font-weight: 600;
+        margin-bottom: 24px;
+        .titleText {
+            margin-bottom: 8px;
+        }
+        .myList {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            row-gap: 8px;
+        }
+    }
+  }
+}

@@ -1,3 +1,63 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:38e796ca815940d21d6217846a303af9959788e9b646ed47f2c2866336f27f8a
-size 1194
+@import '../../common/variables';
+@import '../../common/mixin';
+
+.faq {
+  @include media-query-style;
+
+  .title {
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 80px 0;
+  }
+
+  .total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    .left {
+      width: 28%;
+      height: 500px;
+      .tabDiv {
+        margin-top: 44px;
+        font-size: 20px;
+
+        .now {
+          font-weight: 700;
+          text-decoration-line: underline;
+          text-underline-offset: 4px;
+          cursor: pointer;
+          margin-bottom: 28px;
+        }
+        .next {
+          font-weight: 400;
+          cursor: pointer;
+          margin-bottom: 28px;
+        }
+        .now:hover {
+          opacity: 50%;
+        }
+        .next:hover {
+          opacity: 50%;
+        }
+      }
+    }
+
+    .right {
+      width: 68%;
+      margin-top: 16px;
+      .content {
+        padding: 0 0 40px 0px;
+      }
+    }
+  }
+}
+
+:global {
+  .p-accordion .p-accordion-header .p-accordion-header-link {
+    background-color: $DK_WHITE;
+  }
+  .p-accordion .p-accordion-header:not(.p-disabled) .p-accordion-header-link:focus {
+    box-shadow: none;
+  }
+}

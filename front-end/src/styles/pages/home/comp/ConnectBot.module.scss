@@ -1,3 +1,141 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6a8f9f567eaf7484a5d177d77d769225392a6c359f707323367754017b4b85f9
-size 2898
+@import '../../../common/mixin';
+@import '../../../common/variables';
+
+.title {
+  font-size: 42px;
+  line-height: 60px;
+}
+
+@media screen and (max-width: 758px) {
+  .title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.beforeLogin {
+  @include media-query-style;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 80px;
+  margin-bottom: 80px;
+
+  .kkaebi {
+    margin: 0 -80px;
+    width: 360px;
+  }
+
+  .right {
+    .title {
+      margin-bottom: 12%;
+      span {
+        color: $DK_MAIN;
+        font-weight: 800;
+      }
+    }
+    .signup {
+      margin-bottom: 20px;
+      height: 47px;
+      border-radius: 12px;
+      color: $DK_WHITE;
+      background-color: $DK_MAIN;
+      border-color: $DK_MAIN;
+      &:hover {
+        opacity: 75%;
+      }
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+
+    .registerDiv {
+      width: 400px;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 12px $DK_LGRAY;
+      .stepBar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .line {
+          position: relative;
+          width: 60px;
+          height: 1.4px;
+          background-color: $DK_LightG;
+        }
+        .stepCircles {
+            display: flex;
+            position: absolute;
+            justify-content: space-between;
+            width: 60px;
+            .circle {
+              z-index: 1;
+              width: 16px;
+              height: 16px;
+              background-color: $DK_WHITE;
+              border: 2px solid $DK_MAIN;
+              border-radius: 50%;
+            }
+            .didCircle {
+              background-color: $DK_MAIN;
+              border: 2px solid $DK_MAIN;
+            }
+        }
+      }
+      .inputBox {
+        width: 100%;
+        margin-bottom: 8px;
+        border-radius: 12px;
+        &:hover {
+          outline: none;
+          border-color: $DK_MAIN;
+        }
+        &:focus {
+          outline: none;
+          box-shadow: none;
+          border-color: $DK_MAIN;
+        }
+      }
+      .errorText {
+        font-size: 14px;
+        color: $DK_RED;
+        margin: -4px 0 0 0;
+        text-align: left;
+      }
+      .errorTextBottom {
+        font-size: 14px;
+        color: $DK_RED;
+        text-align: left;
+      }
+      .inputButton {
+        border-radius: 12px;
+        width: 100%;
+        margin: 4px 0;
+        background-color: $DK_MAIN;
+        border-color: $DK_MAIN;
+        &hover {
+          opacity: 75%;
+        }
+        &:focus {
+          outline: none;
+          box-shadow: none;
+          opacity: 90%;
+        }
+      }
+      .info {
+        text-align: center;
+        color: $DK_GRAY;
+        .icon {
+          margin: 12px 8px 0 0;
+        }
+      }
+      .text {
+        margin: 12px 0px 24px 0px;
+        color: $DK_GRAY;
+        line-height: 24px;
+      }
+    }
+  }
+}

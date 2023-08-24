@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4b070d72b9f11b885ac7da585fbe405d479fc76496d392015e51b554b7a1b58e
-size 804
+import { client, clientWithToken } from "./client"
+import { Invite } from "../redux/reducers/inviteReducer"
+
+const inviteUrl = 'community/invite/'
+
+
+export const postFriendInvite = (senderId:number, receiverEmail:string) => {
+	return clientWithToken().post(inviteUrl + "check", {
+		"receiverEmail": receiverEmail,
+		"senderId": senderId
+	})
+}
+
+export const postStudyroomInvite = (senderId:number, receiverEmail:string, roomId:string) => {
+	return clientWithToken().post(inviteUrl + "check", {
+		"receiverEmail": receiverEmail,
+		"senderId": senderId,
+		"studyRoomId": roomId
+	})
+}
+
+export const getReceivedInvite = () => {
+	return clientWithToken().get(inviteUrl + "received/check")
+}
+
+export const deleteInvite = (inviteId:number) => {
+	return clientWithToken().delete(inviteUrl + inviteId + "/check")
+}

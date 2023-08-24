@@ -1,3 +1,55 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9e61035f7cd136e79d1d82588ff9dcf2f636a3492e890e013eefb29fdabee1f6
-size 1397
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+
+export interface Article {
+    id: number
+    title: string
+    content: string
+    createdAt: string
+    writerId: number
+    writerNickname: string
+    numLike: number
+    numScrap: number
+    liked: boolean
+    scrapped: boolean,
+}
+const initialState: Article = {
+    id: 0,
+    title: "",
+    content: "",
+    createdAt: "",
+    writerId: 0,
+    writerNickname: "",
+    numLike: 0,
+    numScrap: 0,
+    liked: false,
+    scrapped: false,
+}
+
+const articleSlice = createSlice({
+    name: 'article',
+    initialState: initialState,
+    reducers: {
+        setArticleData: (state, action: PayloadAction<Article>) => {
+            return {
+                ...action.payload,
+            }
+        },
+        toggleArticleLike: (state, action: PayloadAction<void>) => {
+            return {
+                ...state,
+                numLike: state.numLike + (state.liked ? -1:1),
+                liked: !state.liked,
+            }
+        },
+        toggleArticleScrap: (state, action: PayloadAction<void>) => {
+            return {
+                ...state,
+                numScrap: state.numScrap + (state.scrapped ? -1 : 1),
+                scrapped: !state.scrapped
+            }
+        },
+    }
+})
+
+export const { setArticleData, toggleArticleLike, toggleArticleScrap } = articleSlice.actions
+export default articleSlice.reducer;

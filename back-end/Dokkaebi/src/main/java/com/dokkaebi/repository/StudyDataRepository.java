@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:65e206f2c5d1be01a4972e48a6476b009e74858b87cee0343e71395f910f4b0e
-size 812
+package com.dokkaebi.repository;
+
+import com.dokkaebi.domain.StudyData;
+import jakarta.persistence.EntityManager;
+import java.util.Date;
+import java.util.List;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Repository;
+
+@Repository
+@RequiredArgsConstructor
+public class StudyDataRepository {
+
+  private final EntityManager entityManager;
+
+  public List<StudyData> findDataFromTo(Date from, Date to, Long memberId) {
+    String query = "SELECT sd FROM StudyData sd "
+        + "WHERE sd.member.id = :memberId "
+        + "AND sd.start >= :from "
+        + "AND sd.start < :to";
+    return entityManager.createQuery(query, StudyData.class)
+        .setParameter("from", from)
+        .setParameter("to", to)
+        .setParameter("memberId", memberId)
+        .getResultList();
+  }
+}

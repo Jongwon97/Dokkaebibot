@@ -1,3 +1,175 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7090652bdf823e517903b5a500be59b16912e498df562060b56660d44e220512
-size 3559
+@import '../../../common/mixin';
+@import '../../../common/variables';
+
+.about {
+  // background-color: $DK_LightG;
+  margin: 180px 0 0 0;
+  text-align: center;
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 0 40px 0;
+    .title {
+      font-size: 44px;
+      font-weight: 700;
+      color: $DK_MAIN;
+      margin-left: 12px;
+    }
+  }
+  .content {
+    @include media-query-style;
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0 50px 0;
+    .img1 {
+      width: 30%;
+    }
+    .midTitle {
+      color: $DK_BLACK;
+      padding-right: 10%;
+      font-size: 40px;
+      font-weight: 600;
+      text-align: left;
+      line-height: 52px;
+      .green {
+        color: $DK_MAIN;
+        font-weight: 700;
+      }
+      .subText {
+        color: $DK_BLACK;
+        line-height: 24px;
+        padding: 20px 0;
+        margin-top: 16px;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+  }
+  .content02 {
+    padding: 100px 0 100px 0;
+    background-color: #edfaf4;
+    .title02 {
+      color: $DK_BLACK;
+      font-size: 44px;
+      font-weight: 500;
+      text-align: center;
+      .green {
+        color: $DK_MAIN;
+        font-weight: 700;
+      }
+      margin-bottom: 100px;
+    }
+    .effect {
+      @include media-query-style;
+      display: flex;
+      justify-content: space-around;
+      .effectDiv {
+        .subTitle {
+          font-size: 32px;
+          font-weight: 600;
+          margin: 30px 0 16px 0;
+        }
+        .subContent {
+          white-space: pre-wrap;
+        }
+      }
+    }
+  }
+  .content03 {
+    @include media-query-style;
+    padding: 100px 0 100px 0;
+
+    .midTitle {
+      color: $DK_BLACK;
+      font-size: 40px;
+      font-weight: 600;
+      text-align: left;
+      line-height: 52px;
+      margin-bottom: 80px;
+    }
+
+    @keyframes scrollCards {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-160px * 4));
+      }
+    }
+
+    .cardDiv {
+      overflow: hidden;
+      width: 700px;
+      margin-left: auto;
+      position: relative;
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 100%;
+        z-index: 1;
+      }
+      &:before {
+        left: 0;
+        background: linear-gradient(90deg, rgba(253, 253, 253, 1) 0%, rgba(253, 253, 253, 0) 100%);
+      }
+
+      &:after {
+        right: 0;
+        top: 0;
+        background: linear-gradient(90deg, rgba(253, 253, 253, 0) 0%, rgba(253, 253, 253, 1) 100%);
+      }
+
+      .cards {
+        display: flex;
+        animation: scrollCards 29s linear infinite;
+        column-gap: 18px;
+        position: relative;
+        width: fit-content;
+        transition: transform 0.5s ease-in-out;
+
+        .card {
+          width: 160px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    position: relative;
+    .textDiv {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      .fTitle {
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+      .button {
+        margin-top: 40px;
+        width: 170px;
+        height: 52px;
+        color: $DK_WHITE;
+        font-weight: 600;
+        font-size: 18px;
+        background-color: $DK_MAIN;
+        border-radius: 12px;
+        border: none;
+        cursor: pointer;
+        &:hover {
+          opacity: 75%;
+        }
+      }
+    }
+    .footerImg {
+      position: relative;
+    }
+  }
+}

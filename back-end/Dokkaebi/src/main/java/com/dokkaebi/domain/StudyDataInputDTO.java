@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1106b210d557c2a221fabbe2b0e2352a399414c95e8e736e17c4b11331de5081
-size 540
+package com.dokkaebi.domain;
+
+import java.util.List;
+import java.util.Map;
+import lombok.Data;
+
+@Data
+public class StudyDataInputDTO {
+
+  private String serialNumber;
+  private Long start;
+  private Long end;
+  private List<CameraData> camera;
+  private List<AtmosphereData> atmosphere;
+
+  @Data
+  public static class CameraData {
+    public String status;
+    public Long time;
+  }
+
+  @Data
+  public static class AtmosphereData {
+    public Float temperature;
+    public Float dust;
+    public Float humidity;
+    public Long time;
+  }
+
+}

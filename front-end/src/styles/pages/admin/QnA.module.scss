@@ -1,3 +1,122 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:46657d61232e78dbe23fd57235f2432289942df59db85b0566eedc8f8011f0dd
-size 2335
+@import '../../common/variables';
+@import '../../common/mixin';
+
+:global {
+  .p-dropdown:not(.p-disabled).p-focus {
+    box-shadow: none;
+    border-color: $DK_MAIN;
+  }
+}
+
+.qna {
+  @include media-query-style;
+
+  .title {
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 80px 0;
+  }
+
+  .noticeList {
+    height: 540px;
+    margin-top: 12px;
+    margin-bottom: 48px;
+    background-color: $DK_WHITE;
+    border: 1px solid $DK_WHITE;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px $DK_LGRAY;
+    padding: 28px;
+
+    .noticeBox {
+      overflow: auto;
+      height: 480px;
+
+      .list {
+        padding: 8px;
+        p {
+          margin: 8px 0px;
+          font-weight: 400;
+        }
+        .qTitle {
+          font-size: 20px;
+          font-weight: 600;
+
+          .icon {
+              margin-left: 8px;
+              cursor: pointer;
+              margin-left: 8px;
+          }
+        }
+        .under {
+          margin: 0 16px 8px 0;
+          font-size: 12px;
+          color: $DK_GRAY;
+        }
+        &:hover {
+          opacity: 50%;
+        }
+      }
+      .hr {
+        width: 100%;
+        height: 0.4px;
+        background-color: $DK_LGRAY;
+        margin: auto;
+      }
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    .flex {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 24px;
+
+      .drop {
+        width: 24%;
+        border-radius: 8px;
+        &:hover {
+          border: 1px solid $DK_MAIN;
+        }
+        &:focus {
+          border: 1px solid $DK_MAIN;
+          box-shadow: none;
+        }
+      }
+
+      .titleInput {
+        width: 74%;
+        height: 48px;
+        border: 1px solid $DK_LGRAY;
+        border-radius: 8px;
+        padding: 12px;
+        color: $DK_GRAY;
+        font-size: 16px;
+        &:focus-visible {
+          border: 1px solid $DK_LGRAY;
+        }
+      }
+    }
+    .button {
+      margin-left: auto;
+      border-radius: 8px;
+      width: 160px;
+      margin-top: 12px;
+      margin-bottom: 24px;
+      background-color: $DK_MAIN;
+      border-color: $DK_MAIN;
+      &:hover {
+        background-color: $DK_MAIN;
+        border-color: $DK_MAIN;
+        opacity: 75%;
+      }
+      &:focus {
+        outline: none;
+        box-shadow: none;
+        opacity: 90%;
+      }
+    }
+  }
+}

@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:53f8d62dd211b52c8b364164ff998c333dfe05700978ec59b2266c2522ec0a35
-size 617
+package com.dokkaebi.domain.admin;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
+
+@Entity
+@Table(name = "question")
+@Getter
+@Setter
+public class Qna {
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "question_id")
+  private Long id;
+
+  private String writerEmail;
+
+  private String code;
+
+  private String title;
+
+  @Column(length = 3000)
+  private String content;
+}

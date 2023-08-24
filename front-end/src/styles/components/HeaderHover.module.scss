@@ -1,3 +1,80 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6810c960e25a00150fbce855931309c38aa5d17e897481210d8a37a7c1264c1d
-size 1778
+@import "../common/_variables.scss";
+@import "../common/_mixin.scss";
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $DK_BLACK;
+}
+
+.hover {
+    display: flex;
+    flex-direction: column;
+    .title {
+        font-size: 14px;
+        color: $DK_GRAY;
+        margin-bottom: 12px;
+    }
+    .top {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-right: 36px;
+            .name {
+                display: flex;
+                flex-direction: column;
+                margin-left: 12px;
+                font-size: 14px;
+                color: $DK_GRAY;
+                .nickname {
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: $DK_BLACK;
+                }
+            }
+        }
+        .profile:hover {
+            opacity: 50%;
+        }
+        .logOut {
+            background-color: $DK_LGRAY;
+            border: none;
+            outline: none;
+            border-radius: 8px;
+            font-size: 12px;
+            padding: 8px 12px;
+            margin-left: auto;
+            color: $DK_WHITE;
+            cursor: pointer;
+        }
+        .logOut:hover {
+            background-color: $DK_LGRAY;
+            border: none;
+            outline: none;
+            opacity: 50%;
+        }
+        .logOut:focus {
+            border: none;
+            outline: none;
+            box-shadow: none;
+        }
+    }
+    .hr {
+        margin-bottom: 12px;
+        height: 1px;
+        background-color: $DK_LGRAY;
+    }
+    .midTitle {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        color: $DK_GRAY;
+        margin-bottom: 8px;
+    }
+}

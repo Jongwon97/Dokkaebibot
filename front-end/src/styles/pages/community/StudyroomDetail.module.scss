@@ -1,3 +1,41 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:60a86b8182940375d2aad5be18d0c01a1bf7d161dc1e0b1d3c25d6ad2eca7334
-size 1086
+@import "../../common/_variables.scss";
+@import "../../common/_mixin.scss";
+@import "../../common/Confirm.module.scss";
+
+.detailPage {
+    display: flex;
+    flex-direction: column;
+    .members {
+        @include media-query-style;
+        margin-top: -40px;
+        z-index: 3;
+        margin-bottom: 60px;
+        .whiteBtn {
+            display: flex;
+            margin-bottom: 20px;
+            justify-content: space-between;
+            .left {
+                width: 60px;
+                height: 60px;
+                border: 3px solid $DK_WHITE;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 24px;
+                color: $DK_WHITE;
+            }
+            .leftIcons {
+                display: flex;
+                column-gap: 24px;
+            }
+        }
+        .memberList {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            column-gap: 24px;
+            row-gap: 36px;
+        }
+    }
+}

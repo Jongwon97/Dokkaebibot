@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:20e563403e4820862c3af5358c045f4b405b3d8735dbe158a7d874b7c53919d7
-size 670
+package com.dokkaebi.domain.community;
+
+import com.dokkaebi.service.TimeService;
+import lombok.Data;
+
+@Data
+public class ArticleSimpleDTO {
+
+  private Long id;
+  private String title;
+  private String content;
+  private String createdAt;
+  private String writerNickname;
+  private int numLike;
+  private int numScrap;
+
+  public ArticleSimpleDTO(Article article) {
+    id = article.getId();
+    title = article.getTitle();
+    content = article.getContent();
+    createdAt = TimeService.toDate(article.getCreatedAt());
+    writerNickname = article.getWriter().getNickname();
+    numLike = article.getLikeList().size();
+    numScrap = article.getScrapList().size();
+  }
+}

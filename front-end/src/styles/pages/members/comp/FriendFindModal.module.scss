@@ -1,3 +1,97 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:adaf04c86bce7c2a1f958e2714ad1efd92b2fd7963d9334e3dd192acbce52165
-size 1919
+@import '../../../common/mixin';
+@import '../../../common/variables';
+
+.modalDiv {
+  .modalContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .button {
+    margin-top: 24px;
+    background-color: $DK_MAIN;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+    &:hover {
+      background-color: $DK_MAIN;
+      border: none;
+      outline: none;
+      opacity: 75%;
+    }
+    &:focus {
+      border: none;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  .modalBackdrop {
+    z-index: 2; //위치지정 요소
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(13, 13, 13, 0.45);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    .modalView {
+      background-color: $DK_WHITE;
+      margin: auto;
+      border-radius: 20px;
+      width: 400px;
+      overflow: auto;
+      position: absolute;
+      text-align: center;
+      padding: 24px;
+
+      .title {
+        color: $DK_BLACK;
+        font-size: 24px;
+        font-weight: 700;
+        padding: 16px 0;
+      }
+      .content {
+        color: $DK_GRAY;
+        font-size: 14px;
+        margin-bottom: 24px;
+      }
+      input {
+        margin-bottom: 8px;
+        border-radius: 12px;
+        width: 100%;
+        &:hover {
+          outline: none;
+          border-color: $DK_MAIN;
+        }
+        &:focus {
+          outline: none;
+          box-shadow: none;
+          border-color: $DK_MAIN;
+        }
+      }
+      .inputField {
+        width: 100%;
+      }
+      .button {
+        margin: auto;
+        width: 100%;
+        height: 48px;
+        background-color: $DK_MAIN;
+        color: $DK_WHITE;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+      }
+    }
+  }
+}

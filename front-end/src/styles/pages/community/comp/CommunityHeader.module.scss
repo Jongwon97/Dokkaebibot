@@ -1,3 +1,52 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:01c840129ea8b9a8face44b1396f6584d9a4566e66efd98ca72592a84e4d7688
-size 1217
+@import '../../../common/mixin';
+@import '../../../common/variables';
+
+.title {
+    font-size: 2.5rem;
+}
+
+@media screen and (max-width: 758px) {
+    .title {
+        font-size: 1.25rem;
+    }
+}
+
+.community {
+    display: flex;
+    flex-direction: column;
+
+    .top {
+        margin-bottom: -80px;
+        .black {
+            background-color: $DK_BLACK;
+            position: relative;
+            color: $DK_WHITE;
+            width: 100%;
+            height: 52dvh;
+            overflow: hidden;
+            .image {
+                position: absolute;
+                width: 100%;
+            }
+            .headerImg {
+                position: absolute;
+                width: 100%;
+                height: 52dvh;
+                filter: blur(8px);
+                transform: scale(1.1);
+            }
+            .title {
+                position: absolute;
+                top:20%;
+                left:50%;
+                text-shadow: 2px 2px 12px $DK_BLACK;
+                transform: translate(-50%, -20%); 
+                font-weight: 700;
+                text-align: center;
+                margin-top: 48px;
+                z-index: 1;
+                color: $DK_WHITE;
+            }
+        }
+    }
+}

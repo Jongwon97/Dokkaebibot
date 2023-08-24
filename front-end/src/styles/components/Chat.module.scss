@@ -1,3 +1,120 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:eed825d959c708208669f45a1c82f5c97806f4a8fe6ce41fb33ba52b9123c44d
-size 2526
+@import '../common/mixin';
+@import '../common/variables';
+
+p {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.chatDiv {
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    position: relative;
+    box-shadow: -2px -4px 13px 2px $DK_LGRAY;
+  }
+  .content {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: $DK_WHITE;
+    overflow: auto;
+    padding: 16px;
+
+    .message {
+      text-align: left;
+
+      .leftDiv {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        .left {
+          text-align: left;
+          color: $DK_BLACK;
+          padding: 12px 16px;
+          border-radius: 16px 16px 16px 2px;
+          border: 2px solid $DK_LightG;
+          margin-bottom: 8px;
+          max-width: 240px;
+          background-color: $DK_LightG;
+          word-break: break-all;
+          margin-right: 8px;
+        }
+      }
+
+      .rightDiv {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        .right {
+          color: $DK_BLACK;
+          text-align: left;
+          margin-left: 8px;
+          padding: 12px 16px;
+          border-radius: 16px 16px 2px 16px;
+          border: 2px solid $DK_LYELLOW;
+          margin-bottom: 8px;
+          max-width: 240px;
+          background-color: $DK_LYELLOW;
+          word-break: break-all;
+        }
+      }
+      .time {
+        padding-bottom: 12px;
+        color: $DK_GRAY;
+        font-size: 12px;
+      }
+    }
+  }
+  .footer {
+    width: 100%;
+    height: 96px;
+    .form {
+      width: 100%;
+      padding: 8px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: auto;
+      .textArea {
+        width: 100%;
+        overflow: auto;
+        resize: none;
+        &:hover {
+          border-color: $DK_MAIN;
+        }
+        &:focus {
+          border-color: $DK_MAIN;
+          box-shadow: none;
+        }
+      }
+      .inputButton {
+        background-color: $DK_WHITE;
+        border-color: $DK_WHITE;
+        height: 48px;
+        padding: 12px;
+        color: $DK_MAIN;
+        span {
+            font-size: 20px;
+        }
+        &:hover {
+          background-color: $DK_WHITE;
+          border-color: $DK_WHITE;
+          opacity: 75%;
+        }
+        &:focus {
+          outline: none;
+          box-shadow: none;
+          opacity: 90%;
+        }
+      }
+    }
+  }
+}
