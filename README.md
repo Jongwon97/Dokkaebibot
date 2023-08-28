@@ -17,7 +17,7 @@
 <a href="https://youtu.be/97-a894fMSg"><img src="https://blog.kakaocdn.net/dn/c2yJ7I/btqwXeUM6jI/a3WrMGPo9vakaDzQWepkOK/img.jpg"  width="140"/></a>
 
 ### 시연 영상
-<a href="https://youtu.be/NYNp6FCTp6E"><img src="https://blog.kakaocdn.net/dn/c2yJ7I/btqwXeUM6jI/a3WrMGPo9vakaDzQWepkOK/img.jpg"  width="140"/></a>
+<a href="https://youtu.be/U33sC4tZ6yI?si=4dx1aQ8cJb6m-Obv"><img src="https://blog.kakaocdn.net/dn/c2yJ7I/btqwXeUM6jI/a3WrMGPo9vakaDzQWepkOK/img.jpg"  width="140"/></a>
 
 ## 🔑 핵심 기능
 
