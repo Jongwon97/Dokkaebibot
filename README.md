@@ -52,13 +52,13 @@
 참여 인원 : 6인
 
 ### IoT
-### 👨‍💻 홍의선 (팀장) : face detection, object detection
-### 👨‍💻 류병민 : voice, atomosphere
-### 👩‍💻 이효정 : pose detection
+### 👨‍💻 [홍의선](https://github.com/hon3538) (팀장) : face detection, object detection
+### 👨‍💻 [류병민](https://github.com/bmryu0501) : voice, atomosphere
+### 👩‍💻 [이효정](https://github.com/201611099) : pose detection
 ### Web
-### 👨‍💻 이종원 : Back-end, web socket
-### 👨‍💻 김동훈 : Back-end, Front-end, CI/CD
-### 👩‍💻 조원주 : Front-end, Design
+### 👨‍💻 [이종원](https://github.com/Jongwon97) : Back-end, web socket
+### 👨‍💻 [김동훈](https://github.com/hun23) : Back-end, Front-end, CI/CD
+### 👩‍💻 [조원주](https://github.com/twoju) : Front-end, Design
 
 - - - 
 
