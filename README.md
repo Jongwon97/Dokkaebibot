@@ -15,13 +15,13 @@
 
 ### 프로젝트 UCC
 <!--<a href="https://youtu.be/97-a894fMSg"><img src="https://blog.kakaocdn.net/dn/c2yJ7I/btqwXeUM6jI/a3WrMGPo9vakaDzQWepkOK/img.jpg"  width="140"/></a>-->
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=97-a894fMSg" target="_blank">
+<a href="https://youtu.be/97-a894fMSg" target="_blank">
  <img src="https://img.youtube.com/vi/97-a894fMSg/0.jpg" alt="Watch the video" width="240" height="180" border="10" />
 </a>
 
 ### 시연 영상
 <!--<a href="https://youtu.be/U33sC4tZ6yI?si=4dx1aQ8cJb6m-Obv"><img src="https://blog.kakaocdn.net/dn/c2yJ7I/btqwXeUM6jI/a3WrMGPo9vakaDzQWepkOK/img.jpg"  width="140"/></a>-->
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=U33sC4tZ6yI" target="_blank">
+<a href="https://youtu.be/U33sC4tZ6yI" target="_blank">
  <img src="https://img.youtube.com/vi/U33sC4tZ6yI/0.jpg" alt="Watch the video" width="240" height="180" border="10" />
 </a>
 
