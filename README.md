@@ -1,4 +1,5 @@
 # <img src='./front-end/src/assets/logo.png'  height="24"/> 도깨비봇
+[![Notion Badge](https://img.shields.io/badge/-Detail-white?logo=notion&logoColor=black&link=https://extreme-coelurus-386.notion.site/427b43828a864c2fbef667535bd6cd8d?pvs=4)](https://extreme-coelurus-386.notion.site/427b43828a864c2fbef667535bd6cd8d?pvs=4)
 
 ## <img src='./front-end/src/assets/dokkaebi.png'  height="24"/> 올바른 공부 습관을 위한 분석 서비스 <img src='./front-end/src/assets/dokkaebi.png'  height="24"/>
 ### 웹사이트 : [도깨비봇](https://i9a302.p.ssafy.io)
