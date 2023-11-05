@@ -1,1 +1,0 @@
-insert into member(user_email,user_pw,user_name) values('fefe','adfe','이종원');
